@@ -18,7 +18,7 @@
 
 .cards-section__list {
 	display: grid;
-	grid-template-columns: max-content;
+	grid-template-columns: minmax(min-content, max-content);
 	gap: 2rem;
 	justify-content: center;
 	justify-items: center;
