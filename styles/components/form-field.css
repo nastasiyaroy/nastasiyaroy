@@ -1,0 +1,20 @@
+.form-field__input {
+	display: block;
+
+	width: 100%;
+	padding: 0.6em;
+
+	color: inherit;
+	font-size: 1rem;
+	font-family: inherit;
+
+	border: 0.1em solid var(--color-white);
+
+	background-color: hsl(120, 10%, 94%);
+
+	outline: none;
+}
+
+.form-field__input:focus-visible {
+	box-shadow: 0 0 0 0.15em currentColor;
+}

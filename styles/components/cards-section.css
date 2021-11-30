@@ -1,0 +1,36 @@
+.cards-section {
+	--container-max-width: calc(1550px + var(--container-padding-x) * 2);
+
+	padding: 10rem 0;
+}
+
+.cards-section__container {
+	max-width: var(--container-max-width);
+	margin: 0 auto;
+	padding: 0 1rem;
+}
+
+.cards-section__title {
+	margin: 0 0 3em;
+
+	text-align: center;
+}
+
+.cards-section__list {
+	display: grid;
+	grid-template-columns: max-content;
+	gap: 2rem;
+	justify-content: center;
+
+	margin: 0;
+	padding: 0;
+
+	list-style: none;
+}
+
+@media (min-width: 1260px) {
+	.cards-section__list {
+		grid-template-columns: repeat(3, 1fr);
+		justify-content: space-between;
+	}
+}

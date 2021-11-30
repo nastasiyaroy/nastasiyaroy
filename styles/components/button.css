@@ -1,0 +1,31 @@
+.button {
+	display: block;
+
+	padding: 0.5em 0.6em;
+
+	color: inherit;
+	font-weight: 700;
+	font-size: 1.2em;
+	font-family: inherit;
+	text-transform: uppercase;
+
+	border: 0.2rem solid currentColor;
+
+	background-color: transparent;
+
+	outline: none;
+
+	cursor: pointer;
+}
+
+.button--color-300 {
+	color: var(--color-gray-300);
+}
+
+.button--fill {
+	width: 100%;
+}
+
+.button:focus-visible {
+	box-shadow: 0 0 0 0.1em white, 0 0 0 0.25em currentColor;
+}
