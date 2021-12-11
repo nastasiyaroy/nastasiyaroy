@@ -1,0 +1,10 @@
+.form__field + .form__field {
+	margin-top: 1.5rem;
+}
+
+.form__bottons {
+	display: flex;
+	justify-content: space-between;
+
+	margin-top: 1.4rem;
+}

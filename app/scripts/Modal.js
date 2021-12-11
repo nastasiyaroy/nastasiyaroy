@@ -1,4 +1,5 @@
 import { createFocusTrap } from '../libs/focus-trap.js';
+import { lockPage, unlockPage } from './utils.js';
 
 export class Modal {
 	constructor() {
@@ -17,15 +18,19 @@ export class Modal {
 			return;
 		}
 
+		const scrollWidth = lockPage();
 		const { target } = event;
 		const modalSelector = target.dataset.target;
+
 		this.modal = document.querySelector(modalSelector);
+		this.modal.style.paddingRight = `${scrollWidth}px`;
+		this.modal.setAttribute('role', 'dialog');
 		this.modalFocusTrap = createFocusTrap(this.modal, {
 			onDeactivate: () => {
 				this.closeModal();
 			},
 		});
-		this.dismissButtons = [...this.modal.querySelectorAll('[data-dismiss="modal"]')];
+		this.dismissButtons = [...this.modal.querySelectorAll(`[data-dismiss="${modalSelector.slice(1)}"]`)];
 		this.modalContent = this.modal.querySelector('.modal__content');
 		this.modal.style.display = 'block';
 		this.modal.style.display = getComputedStyle(this.modal).display;
@@ -47,25 +52,26 @@ export class Modal {
 		}
 
 		this.dismissButtons.forEach((buttons) => {
-			buttons.removeEventListener('click', this.closeModal);
+			buttons.removeEventListener('click', this.modalFocusTrap.deactivate);
 		});
-		this.modal.removeEventListener('click', this.modalOverlayClickHandler);
+
+		this.modal.removeEventListener('click', this.modalFocusTrap.deactivate);
 		this.modalContent.removeEventListener('click', this.modalContentClickHandler);
 		this.modal.classList.remove('modal--show');
 
 		const transitionendHandler = () => {
 			this.modal.style.display = 'none';
 			this.modal.removeEventListener('transitionend', transitionendHandler);
+			this.modal.style.removeProperty('padding-right');
+			this.modal.removeAttribute('role', 'dialog');
 			this.modal = null;
 			this.modalFocusTrap = null;
+			this.dismissButtons = null;
 			this.isOpen = false;
+			unlockPage();
 		};
 
 		this.modal.addEventListener('transitionend', transitionendHandler);
-	};
-
-	modalOverlayClickHandler = () => {
-		this.closeModal();
 	};
 
 	// eslint-disable-next-line class-methods-use-this

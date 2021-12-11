@@ -1,5 +1,8 @@
-.nav__burger,
-.nav__slose {
+.nav__burger {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+
 	width: 2.5rem;
 	height: 2.5rem;
 	padding: 0.2em;
@@ -10,13 +13,13 @@
 
 	background-color: transparent;
 
+	outline: none;
+
 	cursor: pointer;
 }
 
-.nav__burger {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-evenly;
+.nav__burger:focus-visible {
+	box-shadow: 0 0 0 0.15em currentColor;
 }
 
 .nav__burger-line {
@@ -35,6 +38,10 @@
 	left: 50%;
 	bottom: 5vh;
 
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+
 	width: 2.5rem;
 	height: 2.5rem;
 	padding: 0.2em;
@@ -47,11 +54,17 @@
 
 	background-color: var(--color-white);
 
+	outline: none;
+
 	box-shadow: 0 0 0.3em 0.3em hsla(0, 0%, 80%, 50%);
 
 	cursor: pointer;
 
 	transform: translateX(-50%);
+}
+
+.nav__close:focus-visible {
+	box-shadow: 0 0 0 0.15em currentColor;
 }
 
 .nav__close-line {
@@ -84,7 +97,7 @@
 	z-index: 10000;
 
 	width: 100%;
-	height: 100vh;
+	height: calc(var(--vh, 6px) * 100);
 
 	background-color: hsla(0, 0%, 89%, 90%);
 }
@@ -162,7 +175,6 @@
 	grid-auto-rows: max-content;
 	gap: 1.5rem;
 
-	margin: 0;
 	padding: 0;
 
 	list-style: none;
@@ -188,10 +200,17 @@
 	text-align: end;
 	text-transform: uppercase;
 	text-decoration: none;
+
+	outline: none;
 }
 
 @media screen and (min-width: 600px) {
 	.nav__link {
 		text-align: start;
 	}
+}
+
+.nav__link:focus,
+.nav__link:hover {
+	text-decoration: underline;
 }

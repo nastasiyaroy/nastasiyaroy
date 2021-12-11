@@ -1,6 +1,9 @@
 import { MobileMenu } from './scripts/MobileMenu.js';
 import { BlockSticky } from './scripts/BlockSticky.js';
 import { Modal } from './scripts/Modal.js';
+import { setVh } from './scripts/utils.js';
+
+setVh();
 
 const mobileMenu = new MobileMenu('.nav');
 mobileMenu.run();
@@ -13,6 +16,7 @@ const headerTopSticky = new BlockSticky({
 	offset: 170,
 	throttle: 5,
 });
+
 headerTopSticky.run();
 
 const modal = new Modal();

@@ -1,4 +1,5 @@
 import { createFocusTrap } from '../libs/focus-trap.js';
+import { lockPage, unlockPage } from './utils.js';
 
 export class MobileMenu {
 	constructor(selector) {
@@ -24,6 +25,7 @@ export class MobileMenu {
 			return;
 		}
 
+		lockPage();
 		this.menuWrapper.classList.add('nav--open');
 		this.menuFocusTrap.activate();
 		this.isOpen = true;
@@ -41,6 +43,7 @@ export class MobileMenu {
 
 			this.menuListWrapper.removeEventListener('transitionend', transitionendHandler);
 			this.isOpen = false;
+			unlockPage();
 		};
 
 		this.menuListWrapper.addEventListener('transitionend', transitionendHandler);

@@ -1,0 +1,21 @@
+.footer {
+	padding: 1rem 2rem;
+}
+
+.footer__container {
+	display: flex;
+	gap: 2rem;
+	justify-content: space-between;
+	align-items: center;
+
+	max-width: var(--container-max-width);
+	margin: 0 auto;
+	padding: 0 1rem;
+}
+
+.footer__links {
+	display: grid;
+}
+
+.footer__copy {
+}
