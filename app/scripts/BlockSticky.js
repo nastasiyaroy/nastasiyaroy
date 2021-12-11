@@ -10,6 +10,7 @@ export class BlockSticky {
 		window.addEventListener('scroll', throttle(this.scrollHandler, this.options.throttle), {
 			passive: true,
 		});
+		this.scrollHandler();
 	};
 
 	scrollHandler = () => {

@@ -8,16 +8,23 @@ export class MobileMenu {
 		this.menuButtonOpen = this.menuWrapper.querySelector('.nav__burger');
 		this.menuButtonClose = this.menuWrapper.querySelector('.nav__close');
 		this.menuListWrapper = this.menuWrapper.querySelector('.nav__list-wrapper');
+		this.menuLinks = this.menuWrapper.querySelectorAll('.nav__link');
+	}
+
+	run = () => {
 		this.menuFocusTrap = createFocusTrap(this.menuListWrapper, {
 			onDeactivate: () => {
 				this.closeMenu();
 			},
 		});
-	}
-
-	run = () => {
 		this.menuButtonOpen.addEventListener('click', this.openMenu);
 		this.menuButtonClose.addEventListener('click', this.menuFocusTrap.deactivate);
+		this.menuLinks.forEach((link) => {
+			link.addEventListener('click', (event) => {
+				event.preventDefault();
+				this.menuFocusTrap.deactivate();
+			});
+		});
 	};
 
 	openMenu = () => {

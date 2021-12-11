@@ -36,17 +36,29 @@ export const setVh = () => {
 	init();
 
 	// const initTrottle = throttle(init, 100);
-	window.addEventListener('resize', setVh);
+	window.addEventListener('resize', init, {
+		passive: true,
+	});
 };
 
+let pageLoockElements = [];
+let scrollWidth = 0;
+
 export const lockPage = () => {
-	const scrollWidth = window.innerWidth - document.documentElement.clientWidth;
-	document.documentElement.style.paddingRight = `${scrollWidth}px`;
+	scrollWidth = window.innerWidth - document.documentElement.clientWidth;
 	document.documentElement.classList.add('page--lock');
+	pageLoockElements = [...document.querySelectorAll('[data-fixed]'), document.documentElement];
+	pageLoockElements.forEach((element) => {
+		const { paddingRight } = getComputedStyle(element);
+		element.style.paddingRight = `${Number.parseFloat(paddingRight) + scrollWidth}px`;
+	});
 	return scrollWidth;
 };
 
 export const unlockPage = () => {
 	document.documentElement.classList.remove('page--lock');
-	document.documentElement.style.removeProperty('padding-right');
+	pageLoockElements.forEach((element) => {
+		const { paddingRight } = getComputedStyle(element);
+		element.style.paddingRight = `${Number.parseFloat(paddingRight) - scrollWidth}px`;
+	});
 };
