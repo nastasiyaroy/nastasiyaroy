@@ -1,0 +1,17 @@
+.page__body {
+	color: var(--color-gray-600);
+	font-family: Montserrat, sans-serif;
+	line-height: 1.2;
+
+	background-color: var(--color-gray-50);
+}
+
+.page--lock,
+.page--lock .page__body {
+	overflow: hidden;
+
+	touch-action: none;
+	-ms-scroll-chaining: none;
+	overscroll-behavior: none;
+	-webkit-overflow-scrolling: auto;
+}

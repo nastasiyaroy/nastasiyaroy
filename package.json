@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "server": "browser-sync start --port 5000 --server app --files * --watch * --no-notify --no-ui"
+    "server": "browser-sync start --port 5000 --server --files * --watch * --no-notify --no-ui"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
