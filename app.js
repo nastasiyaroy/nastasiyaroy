@@ -35,7 +35,7 @@ document.querySelectorAll('.nav__link').forEach((link) => {
 });
 
 const orderForm = () => {
-	const successModal = new Alert({
+	const alert = new Alert({
 		alertSelector: '#success-alert',
 	});
 
@@ -58,9 +58,9 @@ const orderForm = () => {
 			form.reset();
 			orderModal.closeModal();
 			setTimeout(() => {
-				successModal.openModal();
+				alert.openModal();
 				setTimeout(() => {
-					successModal.closeModal();
+					alert.closeModal();
 				}, 5000);
 			}, 1000);
 		} catch (error) {
