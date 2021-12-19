@@ -4,7 +4,6 @@ use JetBrains\PhpStorm\NoReturn;
 
 /**
  * Class Helper
- * @package App
  */
 class Helper
 {

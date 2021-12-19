@@ -4,7 +4,6 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/api/env.php');
 
 /**
  * Class Database
- * @package App
  *
  * Класс базы данных PDO
  * Подключение к базе данных.
