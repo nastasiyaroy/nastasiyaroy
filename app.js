@@ -1,10 +1,8 @@
-// import './libs/gsap.min.js';
-// import './libs/ScrollToPlugin.min.js';
-// import './scripts/lightGallery.js';
 import { MobileMenu } from './scripts/MobileMenu.js';
 import { BlockSticky } from './scripts/BlockSticky.js';
 import { Modal } from './scripts/Modal.js';
 import { setVh } from './scripts/utils.js';
+import './scripts/orderForm.js';
 
 setVh();
 
@@ -22,8 +20,16 @@ const headerTopSticky = new BlockSticky({
 
 headerTopSticky.run();
 
-const modal = new Modal();
-modal.run();
+const orderModal = new Modal({
+	modalSelector: '#order-modal',
+	toggleSelector: '[data-toggle="modal"]',
+});
+orderModal.run();
+
+const successModal = new Modal({
+	modalSelector: '#success-modal',
+});
+successModal.run();
 
 document.querySelectorAll('.nav__link').forEach((link) => {
 	link.addEventListener('click', (event) => {

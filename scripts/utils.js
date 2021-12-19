@@ -40,25 +40,3 @@ export const setVh = () => {
 		passive: true,
 	});
 };
-
-let pageLoockElements = [];
-let scrollWidth = 0;
-
-export const lockPage = () => {
-	scrollWidth = window.innerWidth - document.documentElement.clientWidth;
-	document.documentElement.classList.add('page--lock');
-	pageLoockElements = [...document.querySelectorAll('[data-fixed]'), document.documentElement];
-	pageLoockElements.forEach((element) => {
-		const { paddingRight } = getComputedStyle(element);
-		element.style.paddingRight = `${Number.parseFloat(paddingRight) + scrollWidth}px`;
-	});
-	return scrollWidth;
-};
-
-export const unlockPage = () => {
-	document.documentElement.classList.remove('page--lock');
-	pageLoockElements.forEach((element) => {
-		const { paddingRight } = getComputedStyle(element);
-		element.style.paddingRight = `${Number.parseFloat(paddingRight) - scrollWidth}px`;
-	});
-};

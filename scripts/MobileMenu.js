@@ -1,5 +1,5 @@
 import { createFocusTrap } from '../libs/focus-trap/focus-trap.js';
-import { lockPage, unlockPage } from './utils.js';
+import { PageScroll } from './PageScroll.js';
 
 export class MobileMenu {
 	constructor(selector) {
@@ -9,6 +9,7 @@ export class MobileMenu {
 		this.menuButtonClose = this.menuWrapper.querySelector('.nav__close');
 		this.menuListWrapper = this.menuWrapper.querySelector('.nav__list-wrapper');
 		this.menuLinks = this.menuWrapper.querySelectorAll('.nav__link');
+		this.pageScroll = new PageScroll();
 	}
 
 	run = () => {
@@ -32,7 +33,7 @@ export class MobileMenu {
 			return;
 		}
 
-		lockPage();
+		this.pageScroll.lockPage();
 		this.menuWrapper.classList.add('nav--open');
 		this.menuFocusTrap.activate();
 		this.isOpen = true;
@@ -50,7 +51,7 @@ export class MobileMenu {
 
 			this.menuListWrapper.removeEventListener('transitionend', transitionendHandler);
 			this.isOpen = false;
-			unlockPage();
+			this.pageScroll.unlockPage();
 		};
 
 		this.menuListWrapper.addEventListener('transitionend', transitionendHandler);

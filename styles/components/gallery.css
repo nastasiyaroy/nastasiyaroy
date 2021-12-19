@@ -32,7 +32,21 @@
 }
 
 .lg-backdrop.in {
-	opacity: 0.2;
+	opacity: 0.6;
+}
+
+.lg-components {
+	display: flex;
+	justify-content: center;
+}
+
+.lg-sub-html {
+	padding: 0.8em 1.3em;
+
+	color: inherit;
+	font-weight: 500;
+
+	background-color: hsl(0, 0%, 100%);
 }
 
 .lg-icon {

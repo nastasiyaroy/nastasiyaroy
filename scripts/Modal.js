@@ -1,28 +1,28 @@
 import { createFocusTrap } from '../libs/focus-trap/focus-trap.js';
-import { lockPage, unlockPage } from './utils.js';
+import { PageScroll } from './PageScroll.js';
 
 export class Modal {
-	constructor() {
+	constructor(options = {}) {
+		this.options = options;
 		this.isOpen = false;
-		this.toggleList = [...document.querySelectorAll('[data-toggle="modal"]')];
+		this.toggleList = options?.toggleSelector ? [...document.querySelectorAll(this.options.toggleSelector)] : [];
+		this.modal = document.querySelector(this.options.modalSelector);
+		this.pageScroll = new PageScroll();
 	}
 
 	run = () => {
 		this.toggleList.forEach((toggle) => {
-			toggle.addEventListener('click', this.openModal);
+			toggle.addEventListener('click', this.openModal.bind(this, toggle.dataset.target));
 		});
 	};
 
-	openModal = (event) => {
+	openModal = () => {
 		if (this.isOpen) {
 			return;
 		}
 
-		const scrollWidth = lockPage();
-		const { target } = event;
-		const modalSelector = target.dataset.target;
+		const scrollWidth = this.pageScroll.lockPage();
 
-		this.modal = document.querySelector(modalSelector);
 		this.modal.style.paddingRight = `${scrollWidth}px`;
 		this.modal.setAttribute('role', 'dialog');
 		this.modalFocusTrap = createFocusTrap(this.modal, {
@@ -30,7 +30,9 @@ export class Modal {
 				this.closeModal();
 			},
 		});
-		this.dismissButtons = [...this.modal.querySelectorAll(`[data-dismiss="${modalSelector.slice(1)}"]`)];
+		this.dismissButtons = [
+			...this.modal.querySelectorAll(`[data-dismiss="${this.options.modalSelector.slice(1)}"]`),
+		];
 		this.modalContent = this.modal.querySelector('.modal__content');
 		this.modal.style.display = 'block';
 		this.modal.style.display = getComputedStyle(this.modal).display;
@@ -64,11 +66,8 @@ export class Modal {
 			this.modal.removeEventListener('transitionend', transitionendHandler);
 			this.modal.style.removeProperty('padding-right');
 			this.modal.removeAttribute('role', 'dialog');
-			this.modal = null;
-			this.modalFocusTrap = null;
-			this.dismissButtons = null;
 			this.isOpen = false;
-			unlockPage();
+			this.pageScroll.unlockPage();
 		};
 
 		this.modal.addEventListener('transitionend', transitionendHandler);
