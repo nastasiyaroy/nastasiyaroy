@@ -12,7 +12,6 @@ specifiers:
   eslint-plugin-import: ^2.25.3
   eslint-plugin-prettier: ^4.0.0
   eslint-plugin-unicorn: ^39.0.0
-  gsap: ^3.8.0
   pnpm: ^6.23.2
   prettier: ^2.5.0
   stylelint: ^14.1.0
@@ -24,9 +23,6 @@ specifiers:
   stylelint-order: ^5.0.0
   stylelint-prettier: ^2.0.0
   stylelint-semantic-groups: ^1.1.1
-
-dependencies:
-  gsap: 3.8.0
 
 devDependencies:
   '@babel/core': 7.16.0
@@ -2580,10 +2576,6 @@ packages:
   /graceful-fs/4.2.8:
     resolution: {integrity: sha512-qkIilPUYcNhJpd33n0GBXTB1MMPp14TxEsEs0pTrsSVucApsYzW5V+Q8Qxhik6KU3evy+qkAAowTByymK0avdg==}
     dev: true
-
-  /gsap/3.8.0:
-    resolution: {integrity: sha512-cvpzKkWFePDZCycwXwJnDSpTR3j+a4QLQF/t0c+pXqzRESgAYx5hieaoshzZFjbwsARqr0+5c3GKE7wI273w/g==}
-    dev: false
 
   /hard-rejection/2.1.0:
     resolution: {integrity: sha512-VIZB+ibDhx7ObhAe7OVtoEbuP4h/MuOTHJ+J8h/eBXotJYl0fBgR72xDFCKgIh22OJZIOVNxBMWuhAr10r8HdA==}
