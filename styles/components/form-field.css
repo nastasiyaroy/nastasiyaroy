@@ -1,3 +1,7 @@
+.form-field__input-wrapper {
+	display: block;
+}
+
 .form-field__input {
 	display: block;
 
