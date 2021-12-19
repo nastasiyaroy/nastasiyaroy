@@ -21,15 +21,17 @@ export class Modal {
 			return;
 		}
 
-		const scrollWidth = this.pageScroll.lockPage();
-
-		this.modal.style.paddingRight = `${scrollWidth}px`;
-		this.modal.setAttribute('role', 'dialog');
 		this.modalFocusTrap = createFocusTrap(this.modal, {
 			onDeactivate: () => {
 				this.closeModal();
 			},
 		});
+
+		const scrollWidth = this.pageScroll.lockPage();
+
+		this.modal.style.paddingRight = `${scrollWidth}px`;
+		this.modal.setAttribute('role', 'dialog');
+
 		this.dismissButtons = [
 			...this.modal.querySelectorAll(`[data-dismiss="${this.options.modalSelector.slice(1)}"]`),
 		];
@@ -67,6 +69,7 @@ export class Modal {
 			this.modal.style.removeProperty('padding-right');
 			this.modal.removeAttribute('role', 'dialog');
 			this.isOpen = false;
+			this.modalFocusTrap = null;
 			this.pageScroll.unlockPage();
 		};
 
