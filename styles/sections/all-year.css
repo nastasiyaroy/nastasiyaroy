@@ -1,0 +1,156 @@
+.all-year {
+	position: relative;
+
+	min-height: 600px;
+	padding: 6rem 0;
+
+	background-image: url('../../images/all-year-bg.jpg');
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-size: cover;
+}
+
+@media (min-width: 400px) {
+	.all-year {
+		padding: 8rem 0;
+	}
+}
+
+@media (min-width: 500px) {
+	.all-year {
+		padding: 10rem 0;
+	}
+}
+
+.all-year::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: '';
+
+	width: 100%;
+	height: 100%;
+
+	background-color: hsla(0, 0%, 100%, 60%);
+
+	backdrop-filter: blur(2px);
+}
+
+.all-year__container {
+	--container-max-width: calc(1250px + var(--container-padding-x) * 2);
+
+	position: relative;
+	z-index: 2;
+
+	display: grid;
+	gap: 6rem;
+
+	max-width: var(--container-max-width);
+	margin: 0 auto;
+	padding: 0 var(--container-padding-x);
+
+	color: var(--color-gray-800);
+}
+
+.all-year__title {
+	margin-bottom: 0.6em;
+
+	font-weight: 700;
+	font-size: 1.5rem;
+}
+
+@media (min-width: 400px) {
+	.all-year__title {
+		font-size: 1.9rem;
+	}
+}
+
+@media (min-width: 500px) {
+	.all-year__title {
+		font-size: 2.5rem;
+	}
+}
+
+.all-year__desc {
+	margin-bottom: 1.5em;
+
+	font-weight: 600;
+	font-size: 1rem;
+}
+
+@media (min-width: 400px) {
+	.all-year__desc {
+		font-size: 1.2rem;
+	}
+}
+
+@media (min-width: 500px) {
+	.all-year__desc {
+		font-size: 1.4rem;
+	}
+}
+
+.all-year__feature-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	justify-content: space-around;
+
+	margin-top: 4rem;
+	padding: 0;
+
+	list-style: none;
+}
+
+.all-year__feature {
+	display: grid;
+	gap: 1rem;
+	justify-items: center;
+}
+
+@media (min-width: 500px) {
+	.all-year__feature {
+		flex: 0 0 400px;
+	}
+}
+
+.all-year__feature-icon {
+	width: 70px;
+	height: 70px;
+
+	object-fit: contain;
+}
+
+@media (min-width: 400px) {
+	.all-year__feature-icon {
+		width: 80px;
+		height: 80px;
+	}
+}
+
+@media (min-width: 500px) {
+	.all-year__feature-icon {
+		width: 100px;
+		height: 100px;
+	}
+}
+
+.all-year__feature-title {
+	max-width: 300px;
+
+	font-weight: 600;
+	font-size: 0.875rem;
+	text-align: center;
+}
+
+@media (min-width: 400px) {
+	.all-year__feature-title {
+		font-size: 1rem;
+	}
+}
+
+@media (min-width: 500px) {
+	.all-year__feature-title {
+		font-size: 1.2rem;
+	}
+}

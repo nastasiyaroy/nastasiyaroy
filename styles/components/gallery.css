@@ -29,39 +29,6 @@
 	display: block;
 
 	width: 100%;
-}
-
-.lg-backdrop.in {
-	opacity: 0.6;
-}
-
-.lg-components {
-	display: flex;
-	justify-content: center;
-}
-
-.lg-sub-html {
-	padding: 0.8em 1.3em;
-
-	color: inherit;
-	font-weight: 500;
-
-	background-color: hsl(0, 0%, 100%);
-}
-
-.lg-icon {
-	background-color: hsl(0, 0%, 100%);
-}
-
-.lg-toolbar .lg-icon {
-	background-color: hsl(0, 0%, 100%);
-}
-
-.lg-next:hover:not(.disabled),
-.lg-prev:hover:not(.disabled) {
-	color: hsl(0, 1%, 21%);
-}
-
-.lg-toolbar .lg-icon:hover {
-	color: hsl(0, 1%, 21%);
+	max-width: 380px;
+	margin: 0 auto;
 }

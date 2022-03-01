@@ -1,433 +1,1656 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
+	<head>
+		<title>Fitoстена</title>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <title>Fitoстена</title>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link type="text/css" rel="stylesheet" href="libs/lightgallery/css/lightgallery-bundle.min.css" />
-  <link rel="stylesheet" href="index.css">
-  <link rel="shortcut icon" href="favicon.svg" type="image/svg+xml">
-</head>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<link href="https://fonts.googleapis.com/css2?family=Orelega+One&display=swap" rel="stylesheet" />
+		<!-- ---------------- -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+			rel="stylesheet"
+		/>
 
-<body class="page__body">
-  <header class="header">
-    <div class="header__top">
-      <div class="header__top-container">
-        <h1 class="header__logo">Fitoстена</h1>
-        <nav class="nav nav--close header__nav">
-          <button class="nav__burger" aria-label="открыть меню">
-            <span class="nav__burger-line"></span>
-            <span class="nav__burger-line"></span>
-          </button>
-          <div class="nav__list-wrapper">
-            <div class="nav__circle">
-              <div class="nav__circle-small">
-                <ul class="nav__list">
-                  <li class="nav__item">
-                    <a class="nav__link" href="#section1">Озеленение</a>
-                  </li>
-                  <li class="nav__item">
-                    <a class="nav__link" href="#section2">Услуги</a>
-                  </li>
-                  <li class="nav__item">
-                    <a class="nav__link" href="#section3">Портфолио</a>
-                  </li>
-                  <li class="nav__item">
-                    <a class="nav__link" href="#section1">Фитостены</a>
-                  </li>
-                  <li class="nav__item">
-                    <a class="nav__link" href="#section1">Буквы из мха</a>
-                  </li>
-                  <li class="nav__item">
-                    <a class="nav__link" href="#section1">Купить мох</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap"
+			rel="stylesheet"
+		/>
 
-            <button class="nav__close" aria-label="открыть меню">
-              <span class="nav__close-line"></span>
-              <span class="nav__close-line"></span>
-            </button>
-          </div>
-        </nav>
-      </div>
-    </div>
+		<link type="text/css" rel="stylesheet" href="libs/lightgallery/css/lightgallery-bundle.min.css" />
+		<!-- <link rel="stylesheet" href="/libs/swiper/swiper.css" /> -->
+		<link rel="stylesheet" href="index.css" />
+	</head>
 
-    <div class="header__top header__top--sticky" data-fixed>
-      <div class="header__top-container">
-        <span class="header__logo">Fitoстена</span>
-        <nav class="nav nav--close nav--sticky header__nav">
-          <button class="nav__burger" aria-label="открыть меню">
-            <span class="nav__burger-line"></span>
-            <span class="nav__burger-line"></span>
-          </button>
-          <div class="nav__list-wrapper">
-            <div class="nav__circle">
-              <div class="nav__circle-small">
-                <ul class="nav__list">
-                  <li class="nav__item">
-                    <a class="nav__link" href="#section1">Озеленение</a>
-                  </li>
-                  <li class="nav__item">
-                    <a class="nav__link" href="#section2">Услуги</a>
-                  </li>
-                  <li class="nav__item">
-                    <a class="nav__link" href="#section3">Портфолио</a>
-                  </li>
-                  <li class="nav__item">
-                    <a class="nav__link" href="#section1">Фитостены</a>
-                  </li>
-                  <li class="nav__item">
-                    <a class="nav__link" href="#section1">Буквы из мха</a>
-                  </li>
-                  <li class="nav__item">
-                    <a class="nav__link" href="#section1">Купить мох</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+	<body class="page__body">
+		<header class="header">
+			<div class="header__top">
+				<div class="header__top-container">
+					<h1 class="header__logo">Fitoстена</h1>
+					<nav class="nav nav--close header__nav">
+						<button class="nav__burger" aria-label="открыть меню">
+							<span class="nav__burger-line"></span>
+							<span class="nav__burger-line"></span>
+						</button>
+						<div class="nav__list-wrapper">
+							<div class="nav__circle">
+								<div class="nav__circle-small">
+									<ul class="nav__list">
+										<li class="nav__item">
+											<a class="nav__link" href="#section1">Озеленение</a>
+										</li>
+										<li class="nav__item">
+											<a class="nav__link" href="#section2">Услуги</a>
+										</li>
+										<li class="nav__item">
+											<a class="nav__link" href="#section3">Портфолио</a>
+										</li>
+										<li class="nav__item">
+											<a class="nav__link" href="#section1">Фитостены</a>
+										</li>
+										<li class="nav__item">
+											<a class="nav__link" href="#section1">Буквы из мха</a>
+										</li>
+										<li class="nav__item">
+											<a class="nav__link" href="#section1">Купить мох</a>
+										</li>
+									</ul>
+								</div>
+							</div>
 
-            <button class="nav__close" aria-label="открыть меню">
-              <span class="nav__close-line"></span>
-              <span class="nav__close-line"></span>
-            </button>
-          </div>
-        </nav>
-      </div>
-    </div>
+							<button class="nav__close" aria-label="открыть меню">
+								<span class="nav__close-line"></span>
+								<span class="nav__close-line"></span>
+							</button>
+						</div>
+					</nav>
+				</div>
+			</div>
 
-    <div class="header__description">
-      <div class="header__description-container">
-        <h1 class="header__title">
-          <span class="header__title-top">Озеленение стен стабилизированным мхом</span>
-          <span class="header__title-bottom">квартир, офисов, любых помещений по всей России</span>
-        </h1>
-      </div>
-    </div>
-  </header>
+			<div class="header__top header__top--sticky" data-fixed>
+				<div class="header__top-container">
+					<span class="header__logo">Fitoстена</span>
+					<nav class="nav nav--close nav--sticky header__nav">
+						<button class="nav__burger" aria-label="открыть меню">
+							<span class="nav__burger-line"></span>
+							<span class="nav__burger-line"></span>
+						</button>
+						<div class="nav__list-wrapper">
+							<div class="nav__circle">
+								<div class="nav__circle-small">
+									<ul class="nav__list">
+										<li class="nav__item">
+											<a class="nav__link" href="#section1">Озеленение</a>
+										</li>
+										<li class="nav__item">
+											<a class="nav__link" href="#section2">Услуги</a>
+										</li>
+										<li class="nav__item">
+											<a class="nav__link" href="#section3">Портфолио</a>
+										</li>
+										<li class="nav__item">
+											<a class="nav__link" href="#section1">Фитостены</a>
+										</li>
+										<li class="nav__item">
+											<a class="nav__link" href="#section1">Буквы из мха</a>
+										</li>
+										<li class="nav__item">
+											<a class="nav__link" href="#section1">Купить мох</a>
+										</li>
+									</ul>
+								</div>
+							</div>
 
-  <main class="main">
-    <section class="page-section" id="section1">
-      <div class="page-section__container">
-        <h2 class="section-title page-section__title">
-          <span class="section-title__text">
-            Что мы предлагаем?
-          </span>
-        </h2>
-        <ul class="work-cards">
-          <li class="work-cards__item">
-            <article class="product-card">
-              <img class="product-card__image" src="/images/4_b.jpg" alt="">
-              <div class="product-card__body">
-                <div class="product-card__body-container">
-                  <h3 class="product-card__title">Фитокартины от 20 000 руб.</h3>
-                  <p class="product-card__description">
-                    Фитокартина из живых
-                    растений - это живая природа в вашем доме и офисе!
-                  </p>
-                  <p class="product-card__description">
-                    Растения высаживаются в специальную конструкцию, которая имеет
-                    встроенный резервуар для воды.
-                  </p>
-                </div>
-              </div>
-              <div class="product-card__footer">
-                <div class="product-card__footer-container">
-                  <button class="button button--fill button--color-300 product-card__button" type="button"
-                    data-toggle="modal" data-target="#order-modal">Заказать</button>
-                </div>
-              </div>
-            </article>
-          </li>
-          <li class="work-cards__item">
-            <article class="product-card">
-              <img class="product-card__image" src="/images/29_b.jpg" alt="">
-              <div class="product-card__body">
-                <div class="product-card__body-container">
-                  <h3 class="product-card__title">Фитокартины от 20 000 руб.</h3>
-                  <p class="product-card__description">
-                    Фитокартина из живых
-                    растений - это живая природа в вашем доме и офисе!
-                  </p>
-                  <p class="product-card__description">
-                    Растения высаживаются в специальную конструкцию, которая имеет
-                    встроенный резервуар для воды.
-                  </p>
-                </div>
-              </div>
-              <div class="product-card__footer">
-                <div class="product-card__footer-container">
-                  <button class="button button--fill button--color-300 product-card__button" type="button"
-                    data-toggle="modal" data-target="#order-modal">Заказать</button>
-                </div>
-              </div>
-            </article>
-          </li>
-          <li class="work-cards__item">
-            <article class="product-card">
-              <img class="product-card__image" src="/images/card-1.jpg" alt="">
-              <div class="product-card__body">
-                <div class="product-card__body-container">
-                  <h3 class="product-card__title">Фитокартины от 20 000 руб.</h3>
-                  <p class="product-card__description">
-                    Фитокартина из живых
-                    растений - это живая природа в вашем доме и офисе!
-                  </p>
-                  <p class="product-card__description">
-                    Растения высаживаются в специальную конструкцию, которая имеет
-                    встроенный резервуар для воды.
-                  </p>
-                </div>
-              </div>
-              <div class="product-card__footer">
-                <div class="product-card__footer-container">
-                  <button class="button button--fill button--color-300 product-card__button" type="button"
-                    data-toggle="modal" data-target="#order-modal">Заказать</button>
-                </div>
-              </div>
-            </article>
-          </li>
-        </ul>
-      </div>
-    </section>
+							<button class="nav__close" aria-label="открыть меню">
+								<span class="nav__close-line"></span>
+								<span class="nav__close-line"></span>
+							</button>
+						</div>
+					</nav>
+				</div>
+			</div>
 
-    <section class="page-section" id="section2">
-      <div class="page-section__container">
-        <h2 class="section-title page-section__title">
-          <span class="section-title__text">
-            Возможные варианты фитомодулей?
-          </span>
-        </h2>
-        <ul class="work-cards">
-          <li class="work-cards__item">
-            <article class="product-card">
-              <img class="product-card__image" src="/images/r3.jpg" alt="">
-              <div class="product-card__body">
-                <div class="product-card__body-container">
-                  <h3 class="product-card__title">Фитокартины от 20 000 руб.</h3>
-                  <p class="product-card__description">
-                    Фитокартина из живых
-                    растений - это живая природа в вашем доме и офисе!
-                  </p>
-                  <p class="product-card__description">
-                    Растения высаживаются в специальную конструкцию, которая имеет
-                    встроенный резервуар для воды.
-                  </p>
-                </div>
-              </div>
-              <div class="product-card__footer">
-                <div class="product-card__footer-container">
-                  <button class="button button--fill button--color-300 product-card__button" type="button"
-                    data-toggle="modal" data-target="#order-modal">Заказать</button>
-                </div>
-              </div>
-            </article>
-          </li>
-          <li class="work-cards__item">
-            <article class="product-card">
-              <img class="product-card__image" src="/images/unnamed.jpg" alt="">
-              <div class="product-card__body">
-                <div class="product-card__body-container">
-                  <h3 class="product-card__title">Фитокартины от 20 000 руб.</h3>
-                  <p class="product-card__description">
-                    Фитокартина из живых
-                    растений - это живая природа в вашем доме и офисе!
-                  </p>
-                  <p class="product-card__description">
-                    Растения высаживаются в специальную конструкцию, которая имеет
-                    встроенный резервуар для воды.
-                  </p>
-                </div>
-              </div>
-              <div class="product-card__footer">
-                <div class="product-card__footer-container">
-                  <button class="button button--fill button--color-300 product-card__button" type="button"
-                    data-toggle="modal" data-target="#order-modal">Заказать</button>
-                </div>
-              </div>
-            </article>
-          </li>
-          <li class="work-cards__item">
-            <article class="product-card">
-              <img class="product-card__image" src="/images/card-1.jpg" alt="">
-              <div class="product-card__body">
-                <div class="product-card__body-container">
-                  <h3 class="product-card__title">Фитокартины от 20 000 руб.</h3>
-                  <p class="product-card__description">
-                    Фитокартина из живых
-                    растений - это живая природа в вашем доме и офисе!
-                  </p>
-                  <p class="product-card__description">
-                    Растения высаживаются в специальную конструкцию, которая имеет
-                    встроенный резервуар для воды.
-                  </p>
-                </div>
-              </div>
-              <div class="product-card__footer">
-                <div class="product-card__footer-container">
-                  <button class="button button--fill button--color-300 product-card__button" type="button"
-                    data-toggle="modal" data-target="#order-modal">Заказать</button>
-                </div>
-              </div>
-            </article>
-          </li>
-        </ul>
-      </div>
-    </section>
+			<div class="header__description">
+				<div class="header__description-container">
+					<h1 class="header__title">
+						<span class="header__title-top">Озеленение стен стабилизированным мхом</span>
+						<span class="header__title-bottom">квартир, офисов, любых помещений по всей России</span>
+					</h1>
+				</div>
+			</div>
+		</header>
 
-    <section class="page-section" id="section3">
-      <div class="page-section__container">
-        <h2 class="section-title page-section__title">
-          <span class="section-title__text">
-            Наши работы
-          </span>
-        </h2>
+		<main class="main">
+			<section class="page-section">
+				<div class="page-section__title">
+					<div class="section-title">
+						<div class="section-title__box">
+							<span class="section-title__text-overlay">Почему мы</span>
+							<h2 class="section-title__text">Почему мы</h2>
+						</div>
+					</div>
+				</div>
+				<div class="page-section__container">
+					<div class="promo">
+						<p class="promo__text">
+							С <span class="promo__text-accent">Fitoстена</span> вы можете принести мир и расслабление
+							прямо из природы в свой интерьер. Мы создаем высочайшее качество для любой ситуации в
+							помещении: стабилизированный мох (консервированный с помощью специального процесса) придает
+							стенам постоянное визуальное сияние.
+						</p>
 
-        <div class="gallery">
-          <div class="gallery__item" data-src="./images/gallery/4_b.jpg">
-            <img class="gallery__item-img" alt="" src="./images/gallery/4_b.jpg" />
-          </div>
+						<ul class="promo__list">
+							<li class="promo__list-item">
+								<img class="promo__list-item-img" src="/images/promo/4.png" alt="" />
+								<p class="promo__list-item-title">Официальные поставки</p>
+								<p class="promo__list-item-text">Поставляем только качественную продукцию</p>
+							</li>
+							<li class="promo__list-item">
+								<img class="promo__list-item-img" src="/images/promo/5.png" alt="" />
+								<p class="promo__list-item-title">Гарантия качества</p>
+								<p class="promo__list-item-text">
+									Нас рекомендует большое количество довольных клиентов
+								</p>
+							</li>
+							<li class="promo__list-item">
+								<img class="promo__list-item-img" src="/images/promo/6.png" alt="" />
+								<p class="promo__list-item-title">Кратчайшие сроки</p>
+								<p class="promo__list-item-text">Быстрые сроки выполнения услуг и поставок</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
 
-          <div class="gallery__item" data-src="./images/gallery/unnamed.jpg">
-            <img class="gallery__item-img" alt="" src="./images/gallery/unnamed.jpg" />
-          </div>
+			<section class="page-section">
+				<h2 class="sr-only">Дизайн</h2>
+				<div class="page-section__container">
+					<article class="design design--1">
+						<div class="design__image-box">
+							<img class="design__image" src="/images/desing/1.jpg" alt="" />
+						</div>
+						<div class="design__body">
+							<h3 class="design__title">Дизайн домашних стен</h3>
+							<p class="design__text">Прекрасные идеи для украшения вашего дома</p>
+							<p class="design__text">
+								Вы когда-нибудь задумывались о том, сколько преимуществ вы получаете, используя мох в
+								своем доме?
+							</p>
 
-          <div class="gallery__item" data-src="./images/gallery/4_b.jpg">
-            <img class="gallery__item-img" alt="" src="./images/gallery/4_b.jpg" />
-          </div>
+							<p class="design__text">Использование мха в помещении поможет вам:</p>
+							<ul class="design__list">
+								<li class="design__list-item">Улучшить качество воздуха</li>
+								<li class="design__list-item">Стабилизировать влажность</li>
+								<li class="design__list-item">Снизить уровень углекислого газа</li>
+							</ul>
+						</div>
+					</article>
+					<article class="design design--2">
+						<div class="design__image-box">
+							<img class="design__image" src="/images/desing/2.jpg" alt="" />
+						</div>
+						<div class="design__body">
+							<h3 class="design__title">Дизайн офисных стен</h3>
+							<p class="design__text">Вдохновляющие способы привнести природные элементы в ваш офис</p>
+							<p class="design__text">
+								Знаете ли вы, что растения, в том числе мох, известны своими целебными свойствами?
+							</p>
 
-          <div class="gallery__item" data-src="./images/gallery/unnamed.jpg">
-            <img class="gallery__item-img" alt="" src="./images/gallery/unnamed.jpg" />
-          </div>
+							<p class="design__text">Мох имеет широкий спектр функций, таких как:</p>
+							<ul class="design__list">
+								<li class="design__list-item">Повышение настроения и продуктивности</li>
+								<li class="design__list-item">Улучшение концентрации и памяти</li>
+								<li class="design__list-item">Снижение стресса и усталости</li>
+							</ul>
+						</div>
+					</article>
+					<article class="design design--3">
+						<div class="design__image-box">
+							<img class="design__image" src="/images/desing/3.jpg" alt="" />
+						</div>
+						<div class="design__body">
+							<h3 class="design__title">Дизайн стен для гостеприимства</h3>
+							<p class="design__text">
+								Представляете пространство с интегрированными устойчивыми элементами?
+							</p>
+							<p class="design__text">
+								Применение живых стен внутри ресторана, кафе, отеля придаст пространству удивительный
+								визуальный эффект, а также будет иметь следующие характеристики:
+							</p>
 
-          <div class="gallery__item" data-src="./images/gallery/4_b.jpg">
-            <img class="gallery__item-img" alt="" src="./images/gallery/4_b.jpg" />
-          </div>
+							<ul class="design__list">
+								<li class="design__list-item">Снижение шума</li>
+								<li class="design__list-item">Уменьшение количества пыли в воздухе</li>
+								<li class="design__list-item">Устойчивая окружающая среда</li>
+								<li class="design__list-item">Низкая стоимость энергии</li>
+							</ul>
+						</div>
+					</article>
+				</div>
+			</section>
 
-          <div class="gallery__item" data-src="./images/gallery/unnamed.jpg">
-            <img class="gallery__item-img" alt="" src="./images/gallery/unnamed.jpg" />
-          </div>
+			<section class="page-section page-section--padding-top" id="section1">
+				<div class="page-section__title">
+					<div class="section-title">
+						<div class="section-title__box">
+							<span class="section-title__text-overlay">Что предлагаем</span>
+							<h2 class="section-title__text">Что мы предлагаем</h2>
+						</div>
+					</div>
+				</div>
+				<div class="page-section__container">
+					<div class="slider slider--1">
+						<div class="swiper">
+							<ul class="swiper-wrapper">
+								<li class="swiper-slide">
+									<article class="work-card">
+										<img class="work-card__image" src="/images/4_b.jpg" alt="" />
+										<div class="work-card__body">
+											<div class="work-card__body-container">
+												<h3 class="work-card__title">Фитокартины</h3>
+												<span class="work-card__price">от 20 000 руб.</span>
+												<p class="work-card__description">
+													Фитокартина из живых растений - это живая природа в вашем доме и
+													офисе!
+												</p>
+												<p class="work-card__description">
+													Растения высаживаются в специальную конструкцию, которая имеет
+													встроенный резервуар для воды.
+												</p>
+											</div>
+										</div>
+										<div class="work-card__footer">
+											<div class="work-card__footer-container">
+												<button
+													class="button work-card__button"
+													type="button"
+													data-toggle="modal"
+													data-target="#order-modal"
+												>
+													Заказать
+												</button>
+											</div>
+										</div>
+									</article>
+								</li>
+								<li class="swiper-slide">
+									<article class="work-card">
+										<img class="work-card__image" src="/images/29_b.jpg" alt="" />
+										<div class="work-card__body">
+											<div class="work-card__body-container">
+												<h3 class="work-card__title">Фитокартины</h3>
+												<span class="work-card__price">от 20 000 руб.</span>
+												<p class="work-card__description">
+													Фитокартина из живых растений - это живая природа в вашем доме и
+													офисе!
+												</p>
+												<p class="work-card__description">
+													Растения высаживаются в специальную конструкцию, которая имеет
+													встроенный резервуар для воды.
+												</p>
+											</div>
+										</div>
+										<div class="work-card__footer">
+											<div class="work-card__footer-container">
+												<button
+													class="button work-card__button"
+													type="button"
+													data-toggle="modal"
+													data-target="#order-modal"
+												>
+													Заказать
+												</button>
+											</div>
+										</div>
+									</article>
+								</li>
+								<li class="swiper-slide">
+									<article class="work-card">
+										<img class="work-card__image" src="/images/card-1.jpg" alt="" />
+										<div class="work-card__body">
+											<div class="work-card__body-container">
+												<h3 class="work-card__title">Фитокартины</h3>
+												<span class="work-card__price">от 20 000 руб.</span>
+												<p class="work-card__description">
+													Фитокартина из живых растений - это живая природа в вашем доме и
+													офисе!
+												</p>
+												<p class="work-card__description">
+													Растения высаживаются в специальную конструкцию, которая имеет
+													встроенный резервуар для воды.
+												</p>
+											</div>
+										</div>
+										<div class="work-card__footer">
+											<div class="work-card__footer-container">
+												<button
+													class="button work-card__button"
+													type="button"
+													data-toggle="modal"
+													data-target="#order-modal"
+												>
+													Заказать
+												</button>
+											</div>
+										</div>
+									</article>
+								</li>
+								<li class="swiper-slide">
+									<article class="work-card">
+										<img class="work-card__image" src="/images/4_b.jpg" alt="" />
+										<div class="work-card__body">
+											<div class="work-card__body-container">
+												<h3 class="work-card__title">Фитокартины</h3>
+												<span class="work-card__price">от 20 000 руб.</span>
+												<p class="work-card__description">
+													Фитокартина из живых растений - это живая природа в вашем доме и
+													офисе!
+												</p>
+												<p class="work-card__description">
+													Растения высаживаются в специальную конструкцию, которая имеет
+													встроенный резервуар для воды.
+												</p>
+											</div>
+										</div>
+										<div class="work-card__footer">
+											<div class="work-card__footer-container">
+												<button
+													class="button work-card__button"
+													type="button"
+													data-toggle="modal"
+													data-target="#order-modal"
+												>
+													Заказать
+												</button>
+											</div>
+										</div>
+									</article>
+								</li>
+								<li class="swiper-slide">
+									<article class="work-card">
+										<img class="work-card__image" src="/images/29_b.jpg" alt="" />
+										<div class="work-card__body">
+											<div class="work-card__body-container">
+												<h3 class="work-card__title">Фитокартины</h3>
+												<span class="work-card__price">от 20 000 руб.</span>
+												<p class="work-card__description">
+													Фитокартина из живых растений - это живая природа в вашем доме и
+													офисе!
+												</p>
+												<p class="work-card__description">
+													Растения высаживаются в специальную конструкцию, которая имеет
+													встроенный резервуар для воды.
+												</p>
+											</div>
+										</div>
+										<div class="work-card__footer">
+											<div class="work-card__footer-container">
+												<button
+													class="button work-card__button"
+													type="button"
+													data-toggle="modal"
+													data-target="#order-modal"
+												>
+													Заказать
+												</button>
+											</div>
+										</div>
+									</article>
+								</li>
+								<li class="swiper-slide">
+									<article class="work-card">
+										<img class="work-card__image" src="/images/card-1.jpg" alt="" />
+										<div class="work-card__body">
+											<div class="work-card__body-container">
+												<h3 class="work-card__title">Фитокартины</h3>
+												<span class="work-card__price">от 20 000 руб.</span>
+												<p class="work-card__description">
+													Фитокартина из живых растений - это живая природа в вашем доме и
+													офисе!
+												</p>
+												<p class="work-card__description">
+													Растения высаживаются в специальную конструкцию, которая имеет
+													встроенный резервуар для воды.
+												</p>
+											</div>
+										</div>
+										<div class="work-card__footer">
+											<div class="work-card__footer-container">
+												<button
+													class="button work-card__button"
+													type="button"
+													data-toggle="modal"
+													data-target="#order-modal"
+												>
+													Заказать
+												</button>
+											</div>
+										</div>
+									</article>
+								</li>
+							</ul>
+							<div class="swiper-footer">
+								<button class="swiper-navigation swiper-navigation--prev"></button>
+								<div class="swiper-pagination"></div>
+								<button class="swiper-navigation swiper-navigation--next"></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 
-          <div class="gallery__item" data-src="./images/gallery/4_b.jpg">
-            <img class="gallery__item-img" alt="" src="./images/gallery/4_b.jpg" />
-          </div>
+			<section class="page-section page-section--bg page-section--padding-top" id="section2">
+				<div class="page-section__title">
+					<div class="section-title">
+						<div class="section-title__box">
+							<span class="section-title__text-overlay">
+								<span class="section-title__text-overlay-inner"> </span>
+							</span>
+							<span class="section-title__text-overlay">Варианты фитомодулей</span>
+							<h2 class="section-title__text">Возможные варианты фитомодулей</h2>
+						</div>
+					</div>
+				</div>
+				<div class="page-section__container">
+					<div class="slider slider--2">
+						<div class="swiper">
+							<ul class="swiper-wrapper">
+								<li class="swiper-slide">
+									<article class="work-card">
+										<img class="work-card__image" src="/images/4_b.jpg" alt="" />
+										<div class="work-card__body">
+											<div class="work-card__body-container">
+												<h3 class="work-card__title">Фитокартины</h3>
+												<span class="work-card__price">от 20 000 руб.</span>
+												<p class="work-card__description">
+													Фитокартина из живых растений - это живая природа в вашем доме и
+													офисе!
+												</p>
+												<p class="work-card__description">
+													Растения высаживаются в специальную конструкцию, которая имеет
+													встроенный резервуар для воды.
+												</p>
+											</div>
+										</div>
+										<div class="work-card__footer">
+											<div class="work-card__footer-container">
+												<button
+													class="button work-card__button"
+													type="button"
+													data-toggle="modal"
+													data-target="#order-modal"
+												>
+													Заказать
+												</button>
+											</div>
+										</div>
+									</article>
+								</li>
+								<li class="swiper-slide">
+									<article class="work-card">
+										<img class="work-card__image" src="/images/29_b.jpg" alt="" />
+										<div class="work-card__body">
+											<div class="work-card__body-container">
+												<h3 class="work-card__title">Фитокартины</h3>
+												<span class="work-card__price">от 20 000 руб.</span>
+												<p class="work-card__description">
+													Фитокартина из живых растений - это живая природа в вашем доме и
+													офисе!
+												</p>
+												<p class="work-card__description">
+													Растения высаживаются в специальную конструкцию, которая имеет
+													встроенный резервуар для воды.
+												</p>
+											</div>
+										</div>
+										<div class="work-card__footer">
+											<div class="work-card__footer-container">
+												<button
+													class="button work-card__button"
+													type="button"
+													data-toggle="modal"
+													data-target="#order-modal"
+												>
+													Заказать
+												</button>
+											</div>
+										</div>
+									</article>
+								</li>
+								<li class="swiper-slide">
+									<article class="work-card">
+										<img class="work-card__image" src="/images/card-1.jpg" alt="" />
+										<div class="work-card__body">
+											<div class="work-card__body-container">
+												<h3 class="work-card__title">Фитокартины</h3>
+												<span class="work-card__price">от 20 000 руб.</span>
+												<p class="work-card__description">
+													Фитокартина из живых растений - это живая природа в вашем доме и
+													офисе!
+												</p>
+												<p class="work-card__description">
+													Растения высаживаются в специальную конструкцию, которая имеет
+													встроенный резервуар для воды.
+												</p>
+											</div>
+										</div>
+										<div class="work-card__footer">
+											<div class="work-card__footer-container">
+												<button
+													class="button work-card__button"
+													type="button"
+													data-toggle="modal"
+													data-target="#order-modal"
+												>
+													Заказать
+												</button>
+											</div>
+										</div>
+									</article>
+								</li>
+								<li class="swiper-slide">
+									<article class="work-card">
+										<img class="work-card__image" src="/images/4_b.jpg" alt="" />
+										<div class="work-card__body">
+											<div class="work-card__body-container">
+												<h3 class="work-card__title">Фитокартины</h3>
+												<span class="work-card__price">от 20 000 руб.</span>
+												<p class="work-card__description">
+													Фитокартина из живых растений - это живая природа в вашем доме и
+													офисе!
+												</p>
+												<p class="work-card__description">
+													Растения высаживаются в специальную конструкцию, которая имеет
+													встроенный резервуар для воды.
+												</p>
+											</div>
+										</div>
+										<div class="work-card__footer">
+											<div class="work-card__footer-container">
+												<button
+													class="button work-card__button"
+													type="button"
+													data-toggle="modal"
+													data-target="#order-modal"
+												>
+													Заказать
+												</button>
+											</div>
+										</div>
+									</article>
+								</li>
+								<li class="swiper-slide">
+									<article class="work-card">
+										<img class="work-card__image" src="/images/29_b.jpg" alt="" />
+										<div class="work-card__body">
+											<div class="work-card__body-container">
+												<h3 class="work-card__title">Фитокартины</h3>
+												<span class="work-card__price">от 20 000 руб.</span>
+												<p class="work-card__description">
+													Фитокартина из живых растений - это живая природа в вашем доме и
+													офисе!
+												</p>
+												<p class="work-card__description">
+													Растения высаживаются в специальную конструкцию, которая имеет
+													встроенный резервуар для воды.
+												</p>
+											</div>
+										</div>
+										<div class="work-card__footer">
+											<div class="work-card__footer-container">
+												<button
+													class="button work-card__button"
+													type="button"
+													data-toggle="modal"
+													data-target="#order-modal"
+												>
+													Заказать
+												</button>
+											</div>
+										</div>
+									</article>
+								</li>
+								<li class="swiper-slide">
+									<article class="work-card">
+										<img class="work-card__image" src="/images/card-1.jpg" alt="" />
+										<div class="work-card__body">
+											<div class="work-card__body-container">
+												<h3 class="work-card__title">Фитокартины</h3>
+												<span class="work-card__price">от 20 000 руб.</span>
+												<p class="work-card__description">
+													Фитокартина из живых растений - это живая природа в вашем доме и
+													офисе!
+												</p>
+												<p class="work-card__description">
+													Растения высаживаются в специальную конструкцию, которая имеет
+													встроенный резервуар для воды.
+												</p>
+											</div>
+										</div>
+										<div class="work-card__footer">
+											<div class="work-card__footer-container">
+												<button
+													class="button work-card__button"
+													type="button"
+													data-toggle="modal"
+													data-target="#order-modal"
+												>
+													Заказать
+												</button>
+											</div>
+										</div>
+									</article>
+								</li>
+							</ul>
+							<div class="swiper-footer">
+								<button class="swiper-navigation swiper-navigation--prev"></button>
+								<div class="swiper-pagination"></div>
+								<button class="swiper-navigation swiper-navigation--next"></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 
-          <div class="gallery__item" data-src="./images/gallery/unnamed.jpg">
-            <img class="gallery__item-img" alt="" src="./images/gallery/unnamed.jpg" />
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+			<section class="page-section page-section--padding-top" id="section3">
+				<div class="page-section__title">
+					<div class="section-title">
+						<div class="section-title__box">
+							<span class="section-title__text-overlay">Наши работы</span>
+							<h2 class="section-title__text">Наши работы</h2>
+						</div>
+					</div>
+				</div>
+				<div class="page-section__container">
+					<div class="gallery">
+						<div class="gallery__item" data-src="./images/gallery/4_b.jpg">
+							<img class="gallery__item-img" alt="" src="./images/gallery/4_b.jpg" />
+						</div>
 
-  <footer class="footer">
-    <div class="footer__container">
-      <p class="footer__copy">© 2021 Copyright: Фитостена</p>
+						<div class="gallery__item" data-src="./images/gallery/unnamed.jpg">
+							<img class="gallery__item-img" alt="" src="./images/gallery/unnamed.jpg" />
+						</div>
 
-      <ul class="links">
-        <li class="links__item">
-          <a class="link-icon links__link" href="" aria-label="instagram">
-            <svg class="link-icon__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-              aria-hidden="true" role="img" width="32" height="32" preserveAspectRatio="xMidYMid meet"
-              viewBox="0 0 24 24">
-              <path
-                d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3z"
-                fill="currentColor"></path>
-            </svg>
-          </a>
-        </li>
-        <li class="links__item">
-          <a class="link-icon links__link" href="" aria-label="vk">
-            <svg class="link-icon__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-              aria-hidden="true" role="img" width="32" height="32" preserveAspectRatio="xMidYMid meet"
-              viewBox="0 0 24 24">
-              <path
-                d="M21.579 6.855c.14-.465 0-.806-.662-.806h-2.193c-.558 0-.813.295-.953.619c0 0-1.115 2.719-2.695 4.482c-.51.513-.743.675-1.021.675c-.139 0-.341-.162-.341-.627V6.855c0-.558-.161-.806-.626-.806H9.642c-.348 0-.558.258-.558.504c0 .528.79.65.871 2.138v3.228c0 .707-.127.836-.407.836c-.743 0-2.551-2.729-3.624-5.853c-.209-.607-.42-.852-.98-.852H2.752c-.627 0-.752.295-.752.619c0 .582.743 3.462 3.461 7.271c1.812 2.601 4.363 4.011 6.687 4.011c1.393 0 1.565-.313 1.565-.853v-1.966c0-.626.133-.752.574-.752c.324 0 .882.164 2.183 1.417c1.486 1.486 1.732 2.153 2.567 2.153h2.192c.626 0 .939-.313.759-.931c-.197-.615-.907-1.51-1.849-2.569c-.512-.604-1.277-1.254-1.51-1.579c-.325-.419-.231-.604 0-.976c.001.001 2.672-3.761 2.95-5.04z"
-                fill="currentColor"></path>
-            </svg>
-          </a>
-        </li>
-      </ul>
-    </div>
+						<div class="gallery__item" data-src="./images/gallery/4_b.jpg">
+							<img class="gallery__item-img" alt="" src="./images/gallery/4_b.jpg" />
+						</div>
 
-  </footer>
+						<div class="gallery__item" data-src="./images/gallery/unnamed.jpg">
+							<img class="gallery__item-img" alt="" src="./images/gallery/unnamed.jpg" />
+						</div>
 
-  <div class="modal modal--fade" id="order-modal" aria-labelledby="order-modal-title" tabindex="-1" aria-hidden="true">
-    <div class="modal__inner" data-dismiss="order-modal">
-      <div class="modal__content">
-        <div class="modal__header">
-          <h3 class="modal__title" id="order-modal-title">Заказать</h3>
-          <button class="modal__close" type="button" aria-label="Закрыть" data-dismiss="order-modal">
-            <span class="modal__close-line"></span>
-            <span class="modal__close-line"></span>
-          </button>
-        </div>
-        <div class="modal__body">
-          <form class="form order-form">
-            <div class="form-field form__field">
-              <label class="form-field__inner">
-                <span class="form-field__label sr-only">Ваше имя</span>
-                <span class="form-field__input-wrapper">
-                  <input class="form-field__input" name="customer_name" type="text" placeholder="Ваше имя" required>
-                </span>
-              </label>
-            </div>
-            <div class="form-field form__field">
-              <label class="form-field__inner">
-                <span class="form-field__label sr-only">Номер телефона</span>
-                <span class="form-field__input-wrapper">
-                  <input class="form-field__input" name="customer_phone" type="text" placeholder="Номер телефона" required>
-                </span>
-              </label>
-            </div>
-            <div class="form__buttons">
-              <button class="button button--sm form__button" type="submit">
-                Отправить
-              </button>
-              <button class="button button--sm button--no-outline form__button" type="reset" data-dismiss="order-modal">
-                Отмена
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
+						<div class="gallery__item" data-src="./images/gallery/4_b.jpg">
+							<img class="gallery__item-img" alt="" src="./images/gallery/4_b.jpg" />
+						</div>
 
-  <div class="modal modal--fade" id="success-alert" aria-labelledby="success-alert-title" tabindex="-1"
-    aria-hidden="true">
-    <div class="modal__inner" data-dismiss="success-alert">
-      <div class="modal__content">
-        <div class="modal__header">
-          <h3 class="modal__title" id="success-alert-title">Успех</h3>
-        </div>
-        <div class="modal__body">
-          <p class="modal__body-text">
-            Ваша заявка успешно отправлена
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
+						<div class="gallery__item" data-src="./images/gallery/unnamed.jpg">
+							<img class="gallery__item-img" alt="" src="./images/gallery/unnamed.jpg" />
+						</div>
 
-  <!-- Or use the minified version -->
-  <script src="libs/lightgallery/lightgallery.min.js"></script>
+						<div class="gallery__item" data-src="./images/gallery/4_b.jpg">
+							<img class="gallery__item-img" alt="" src="./images/gallery/4_b.jpg" />
+						</div>
 
-  <script>
-    // eslint-disable-next-line no-undef
-    lightGallery(document.querySelector('.gallery'), {
-      download: false,
-    });
-  </script>
-  
-  <!-- lightgallery plugins -->
-  <script src="libs/gsap/gsap.min.js"></script>
-  <script src="libs/gsap/ScrollToPlugin.min.js"></script>
-  
-  <script type="module" src="app.js"></script>
-</body>
+						<div class="gallery__item" data-src="./images/gallery/unnamed.jpg">
+							<img class="gallery__item-img" alt="" src="./images/gallery/unnamed.jpg" />
+						</div>
+					</div>
+				</div>
+			</section>
 
+			<section class="stabilized-moss">
+				<div class="stabilized-moss__container">
+					<div class="stabilized-moss__header">
+						<h2 class="stabilized-moss__title">Стабилизированный мох</h2>
+						<span class="stabilized-moss__description"
+							>это натуральный мох, природные соки которого заменены экологичным раствором глицерина или
+							соли.</span
+						>
+					</div>
+
+					<div class="stabilized-moss__content">
+						<div class="stabilized-moss__wrapper">
+							<h3 class="stabilized-moss__info">Стабилизированные растения, цветы и мох</h3>
+							<h3 class="stabilized-moss__info">Стабилизированный мох прослужит до 8 лет!</h3>
+						</div>
+
+						<ul class="stabilized-moss__property-list">
+							<li class="stabilized-moss__property">
+								<div class="stabilized-moss__property-img-wrapper">
+									<img
+										class="stabilized-moss__property-img"
+										src="https://moss.by/img/icon1.png"
+										alt="Бюро MOSS.BY"
+									/>
+								</div>
+								<p class="stabilized-moss__property-text">Не требуют полива</p>
+							</li>
+							<li class="stabilized-moss__property">
+								<div class="stabilized-moss__property-img-wrapper">
+									<img
+										class="stabilized-moss__property-img"
+										src="https://moss.by/img/icon2.png"
+										alt="Бюро MOSS.BY"
+									/>
+								</div>
+								<p class="stabilized-moss__property-text">Не нужно освещение</p>
+							</li>
+							<li class="stabilized-moss__property">
+								<div class="stabilized-moss__property-img-wrapper">
+									<img
+										class="stabilized-moss__property-img"
+										src="https://moss.by/img/icon3.png"
+										alt="Бюро MOSS.BY"
+									/>
+								</div>
+								<p class="stabilized-moss__property-text">Не требуют ухода, не отнимает времени</p>
+							</li>
+							<li class="stabilized-moss__property">
+								<div class="stabilized-moss__property-img-wrapper">
+									<img
+										class="stabilized-moss__property-img"
+										src="https://moss.by/img/icon4.png"
+										alt="Бюро MOSS.BY"
+									/>
+								</div>
+								<p class="stabilized-moss__property-text">Мягкий и приятный на ощупь</p>
+							</li>
+							<li class="stabilized-moss__property">
+								<div class="stabilized-moss__property-img-wrapper">
+									<img
+										class="stabilized-moss__property-img"
+										src="https://moss.by/img/icon5.png"
+										alt="Бюро MOSS.BY"
+									/>
+								</div>
+								<p class="stabilized-moss__property-text">Не заводятся насекомые</p>
+							</li>
+							<li class="stabilized-moss__property">
+								<img
+									class="stabilized-moss__property-img"
+									src="https://moss.by/img/icon6.png"
+									alt="Бюро MOSS.BY"
+								/>
+								<p class="stabilized-moss__property-text">Без аллергии. Безопасен для детей</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<div class="page-section page-section--bg page-section--moss" id="section2">
+				<div class="page-section__container">
+					<div class="slider slider--4">
+						<div class="swiper">
+							<ul class="swiper-wrapper">
+								<li class="swiper-slide">
+									<article class="moss-card">
+										<img class="moss-card__image" src="/images/4_b.jpg" alt="" />
+										<div class="moss-card__body">
+											<div class="moss-card__body-container">
+												<h3 class="moss-card__title">Мох Nordic стабилизированный ягель</h3>
+											</div>
+										</div>
+										<div class="moss-card__footer">
+											<div class="moss-card__footer-container">
+												<button
+													class="button moss-card__button"
+													type="button"
+													data-toggle="modal"
+													data-target="#order-modal"
+												>
+													Заказать
+												</button>
+												<span class="moss-card__price">от 20 000 руб.</span>
+											</div>
+										</div>
+									</article>
+								</li>
+								<li class="swiper-slide">
+									<article class="moss-card">
+										<img class="moss-card__image" src="/images/4_b.jpg" alt="" />
+										<div class="moss-card__body">
+											<div class="moss-card__body-container">
+												<h3 class="moss-card__title">Мох Nordic стабилизированный ягель</h3>
+											</div>
+										</div>
+										<div class="moss-card__footer">
+											<div class="moss-card__footer-container">
+												<button
+													class="button moss-card__button"
+													type="button"
+													data-toggle="modal"
+													data-target="#order-modal"
+												>
+													Заказать
+												</button>
+												<span class="moss-card__price">от 20 000 руб.</span>
+											</div>
+										</div>
+									</article>
+								</li>
+								<li class="swiper-slide">
+									<article class="moss-card">
+										<img class="moss-card__image" src="/images/4_b.jpg" alt="" />
+										<div class="moss-card__body">
+											<div class="moss-card__body-container">
+												<h3 class="moss-card__title">Мох Nordic стабилизированный ягель</h3>
+											</div>
+										</div>
+										<div class="moss-card__footer">
+											<div class="moss-card__footer-container">
+												<button
+													class="button moss-card__button"
+													type="button"
+													data-toggle="modal"
+													data-target="#order-modal"
+												>
+													Заказать
+												</button>
+												<span class="moss-card__price">от 20 000 руб.</span>
+											</div>
+										</div>
+									</article>
+								</li>
+								<li class="swiper-slide">
+									<article class="moss-card">
+										<img class="moss-card__image" src="/images/4_b.jpg" alt="" />
+										<div class="moss-card__body">
+											<div class="moss-card__body-container">
+												<h3 class="moss-card__title">Мох Nordic стабилизированный ягель</h3>
+											</div>
+										</div>
+										<div class="moss-card__footer">
+											<div class="moss-card__footer-container">
+												<button
+													class="button moss-card__button"
+													type="button"
+													data-toggle="modal"
+													data-target="#order-modal"
+												>
+													Заказать
+												</button>
+												<span class="moss-card__price">от 20 000 руб.</span>
+											</div>
+										</div>
+									</article>
+								</li>
+								<li class="swiper-slide">
+									<article class="moss-card">
+										<img class="moss-card__image" src="/images/4_b.jpg" alt="" />
+										<div class="moss-card__body">
+											<div class="moss-card__body-container">
+												<h3 class="moss-card__title">Мох Nordic стабилизированный ягель</h3>
+											</div>
+										</div>
+										<div class="moss-card__footer">
+											<div class="moss-card__footer-container">
+												<button
+													class="button moss-card__button"
+													type="button"
+													data-toggle="modal"
+													data-target="#order-modal"
+												>
+													Заказать
+												</button>
+												<span class="moss-card__price">от 20 000 руб.</span>
+											</div>
+										</div>
+									</article>
+								</li>
+								<li class="swiper-slide">
+									<article class="moss-card">
+										<img class="moss-card__image" src="/images/4_b.jpg" alt="" />
+										<div class="moss-card__body">
+											<div class="moss-card__body-container">
+												<h3 class="moss-card__title">Мох Nordic стабилизированный ягель</h3>
+											</div>
+										</div>
+										<div class="moss-card__footer">
+											<div class="moss-card__footer-container">
+												<button
+													class="button moss-card__button"
+													type="button"
+													data-toggle="modal"
+													data-target="#order-modal"
+												>
+													Заказать
+												</button>
+												<span class="moss-card__price">от 20 000 руб.</span>
+											</div>
+										</div>
+									</article>
+								</li>
+							</ul>
+							<div class="swiper-footer">
+								<button class="swiper-navigation swiper-navigation--prev"></button>
+								<div class="swiper-pagination"></div>
+								<button class="swiper-navigation swiper-navigation--next"></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<section class="page-section page-section--padding-top" id="section2">
+				<div class="page-section__title">
+					<div class="section-title__box">
+						<span class="section-title__text-overlay">Сэкономьте на озеленении</span>
+						<h2 class="section-title__text">
+							Сэкономьте на озеленении с помощью готовой фито-стены из мха
+						</h2>
+					</div>
+				</div>
+				<div class="page-section__container">
+					<div class="economy">
+						<p class="economy__desc">
+							Готовые фитостены из мха с монтажным набором для самостоятельной сборки. Доставка в любую
+							точку России.
+						</p>
+						<ul class="economy__list">
+							<li class="economy__list-item">
+								<img class="economy__list-item-ico" src="./images/icons/economy-1.png" alt="" />
+								<p class="economy__list-item-text">Любые размеры и формы под заказ</p>
+							</li>
+							<li class="economy__list-item">
+								<img class="economy__list-item-ico" src="./images/icons/economy-1.png" alt="" />
+								<p class="economy__list-item-text">Сборная конструкция без стыков</p>
+							</li>
+							<li class="economy__list-item">
+								<img class="economy__list-item-ico" src="./images/icons/economy-1.png" alt="" />
+								<p class="economy__list-item-text">Фитостены очень легкие</p>
+							</li>
+							<li class="economy__list-item">
+								<img class="economy__list-item-ico" src="./images/icons/economy-1.png" alt="" />
+								<p class="economy__list-item-text">Монтаж без сверления стен</p>
+							</li>
+							<li class="economy__list-item">
+								<img class="economy__list-item-ico" src="./images/icons/economy-1.png" alt="" />
+								<p class="economy__list-item-text">Установка занимает 5-10 минут</p>
+							</li>
+							<li class="economy__list-item">
+								<img class="economy__list-item-ico" src="./images/icons/economy-1.png" alt="" />
+								<p class="economy__list-item-text">25 различных оттенков мха на выбор</p>
+							</li>
+							<li class="economy__list-item">
+								<img class="economy__list-item-ico" src="./images/icons/economy-1.png" alt="" />
+								<p class="economy__list-item-text">Компактные размеры для раздельных блоков</p>
+							</li>
+							<li class="economy__list-item">
+								<img class="economy__list-item-ico" src="./images/icons/economy-1.png" alt="" />
+								<p class="economy__list-item-text">Мох не мнется при транспортировке</p>
+							</li>
+							<li class="economy__list-item">
+								<img class="economy__list-item-ico" src="./images/icons/economy-1.png" alt="" />
+								<p class="economy__list-item-text">Доставка в любой город до двери</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<section class="page-section" id="section2">
+				<div class="page-section__title">
+					<div class="section-title">
+						<div class="section-title__box">
+							<span class="section-title__text-overlay">Логотипы из мха</span>
+							<h2 class="section-title__text">Буквы и логотипы из мха</h2>
+						</div>
+					</div>
+				</div>
+				<div class="page-section__container page-section__container--full">
+					<div class="moss-logos">
+						<div class="slider slider--full slider--3">
+							<div class="swiper">
+								<ul class="swiper-wrapper">
+									<li class="swiper-slide">
+										<div class="moss-logo-card">
+											<img
+												class="moss-logo-card__image"
+												src="/images/abc/portfolio1.jpg"
+												alt=""
+											/>
+										</div>
+									</li>
+									<li class="swiper-slide">
+										<div class="moss-logo-card">
+											<img
+												class="moss-logo-card__image"
+												src="/images/abc/portfolio3.jpg"
+												alt=""
+											/>
+										</div>
+									</li>
+									<li class="swiper-slide">
+										<div class="moss-logo-card">
+											<img
+												class="moss-logo-card__image"
+												src="/images/abc/portfolio1.jpg"
+												alt=""
+											/>
+										</div>
+									</li>
+									<li class="swiper-slide">
+										<div class="moss-logo-card">
+											<img
+												class="moss-logo-card__image"
+												src="/images/abc/portfolio3.jpg"
+												alt=""
+											/>
+										</div>
+									</li>
+									<li class="swiper-slide">
+										<div class="moss-logo-card">
+											<img
+												class="moss-logo-card__image"
+												src="/images/abc/portfolio1.jpg"
+												alt=""
+											/>
+										</div>
+									</li>
+									<li class="swiper-slide">
+										<div class="moss-logo-card">
+											<img
+												class="moss-logo-card__image"
+												src="/images/abc/portfolio3.jpg"
+												alt=""
+											/>
+										</div>
+									</li>
+									<li class="swiper-slide">
+										<div class="moss-logo-card">
+											<img
+												class="moss-logo-card__image"
+												src="/images/abc/portfolio1.jpg"
+												alt=""
+											/>
+										</div>
+									</li>
+								</ul>
+								<div class="swiper-footer">
+									<button class="swiper-navigation swiper-navigation--prev"></button>
+									<div class="swiper-pagination"></div>
+									<button class="swiper-navigation swiper-navigation--next"></button>
+								</div>
+							</div>
+						</div>
+						<div class="moss-logos__footer">
+							<div class="moss-logos__desc">
+								<p>Вырезаем высокоточной лазерной резкой из любого материала</p>
+								<p>Заполняем любым мхом из различных цветов</p>
+								<p>Легкая конструкция легко крепится на стену</p>
+							</div>
+							<button
+								class="button moss-logos__button"
+								type="button"
+								data-toggle="modal"
+								data-target="#calc-modal"
+							>
+								Рассчитать стоимость
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="page-section page-section--padding-top" id="section1">
+				<div class="page-section__title">
+					<div class="section-title">
+						<div class="section-title__box">
+							<span class="section-title__text-overlay">Отзывы</span>
+							<h2 class="section-title__text">Отзывы</h2>
+						</div>
+					</div>
+				</div>
+				<div class="page-section__container">
+					<div class="slider slider--5">
+						<div class="swiper">
+							<ul class="swiper-wrapper">
+								<li class="swiper-slide">
+									<article class="review-card">
+										<div class="review-card__header">
+											<img class="review-card__image" src="/images/reviews/1.png" alt="" />
+											<h3 class="review-card__name">Анастасия Родина</h3>
+										</div>
+										<div class="review-card__body">
+											<p class="review-card__text">
+												Не хватает кнопок. Adipisci officiis, expedita modi excepturi alias
+												earum dolores quam saepe, maxime ducimus pariatur, sint ipsa. Voluptatem
+												quam veritatis similique corporis tempora dolorem.
+											</p>
+										</div>
+										<div class="review-card__footer">
+											<div class="review-card__footer-container">
+												<div class="review-card__stars">
+													<img
+														class="review-card__star"
+														src="/images/icons/star-2.svg"
+														alt=""
+													/>
+													<img
+														class="review-card__star"
+														src="/images/icons/star.svg"
+														alt=""
+													/>
+													<img
+														class="review-card__star"
+														src="/images/icons/star.svg"
+														alt=""
+													/>
+													<img
+														class="review-card__star"
+														src="/images/icons/star.svg"
+														alt=""
+													/>
+													<img
+														class="review-card__star"
+														src="/images/icons/star.svg"
+														alt=""
+													/>
+												</div>
+											</div>
+										</div>
+									</article>
+								</li>
+								<li class="swiper-slide">
+									<article class="review-card">
+										<div class="review-card__header">
+											<img class="review-card__image" src="/images/reviews/1.png" alt="" />
+											<h3 class="review-card__name">Анастасия Родина</h3>
+										</div>
+										<div class="review-card__body">
+											<p class="review-card__text">
+												Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci
+											</p>
+										</div>
+										<div class="review-card__footer">
+											<div class="review-card__footer-container">
+												<div class="review-card__stars">
+													<img
+														class="review-card__star"
+														src="/images/icons/star-2.svg"
+														alt=""
+													/>
+													<img
+														class="review-card__star"
+														src="/images/icons/star-2.svg"
+														alt=""
+													/>
+													<img
+														class="review-card__star"
+														src="/images/icons/star-2.svg"
+														alt=""
+													/>
+													<img
+														class="review-card__star"
+														src="/images/icons/star.svg"
+														alt=""
+													/>
+													<img
+														class="review-card__star"
+														src="/images/icons/star.svg"
+														alt=""
+													/>
+												</div>
+											</div>
+										</div>
+									</article>
+								</li>
+								<li class="swiper-slide">
+									<article class="review-card">
+										<div class="review-card__header">
+											<img class="review-card__image" src="/images/reviews/1.png" alt="" />
+											<h3 class="review-card__name">Анастасия Родина</h3>
+										</div>
+										<div class="review-card__body">
+											<p class="review-card__text">Lorem, ipsum dolor sit amet</p>
+										</div>
+										<div class="review-card__footer">
+											<div class="review-card__footer-container">
+												<div class="review-card__stars">
+													<img
+														class="review-card__star"
+														src="/images/icons/star-2.svg"
+														alt=""
+													/>
+													<img
+														class="review-card__star"
+														src="/images/icons/star-2.svg"
+														alt=""
+													/>
+													<img
+														class="review-card__star"
+														src="/images/icons/star-2.svg"
+														alt=""
+													/>
+													<img
+														class="review-card__star"
+														src="/images/icons/star.svg"
+														alt=""
+													/>
+													<img
+														class="review-card__star"
+														src="/images/icons/star.svg"
+														alt=""
+													/>
+												</div>
+											</div>
+										</div>
+									</article>
+								</li>
+								<li class="swiper-slide">
+									<article class="review-card">
+										<div class="review-card__header">
+											<img class="review-card__image" src="/images/reviews/1.png" alt="" />
+											<h3 class="review-card__name">Анастасия Родина</h3>
+										</div>
+										<div class="review-card__body">
+											<p class="review-card__text">
+												Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci
+												officiis, expedita modi excepturi alias earum dolores quam saepe, maxime
+												ducimus pariatur, sint ipsa. Voluptatem quam veritatis similique
+												corporis tempora dolorem.
+											</p>
+										</div>
+										<div class="review-card__footer">
+											<div class="review-card__footer-container">
+												<div class="review-card__stars">
+													<img
+														class="review-card__star"
+														src="/images/icons/star-2.svg"
+														alt=""
+													/>
+													<img
+														class="review-card__star"
+														src="/images/icons/star-2.svg"
+														alt=""
+													/>
+													<img
+														class="review-card__star"
+														src="/images/icons/star-2.svg"
+														alt=""
+													/>
+													<img
+														class="review-card__star"
+														src="/images/icons/star.svg"
+														alt=""
+													/>
+													<img
+														class="review-card__star"
+														src="/images/icons/star.svg"
+														alt=""
+													/>
+												</div>
+											</div>
+										</div>
+									</article>
+								</li>
+							</ul>
+							<div class="swiper-footer">
+								<button class="swiper-navigation swiper-navigation--prev"></button>
+								<div class="swiper-pagination"></div>
+								<button class="swiper-navigation swiper-navigation--next"></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__left-column">
+					<p class="footer__copy">© 2022 Copyright: Фитостена</p>
+					<button
+						class="button button--sm footer__call"
+						type="button"
+						data-target="#call-modal"
+					>
+						Оставить заявку
+					</button>
+					<ul class="links">
+						<li class="links__item">
+							<a class="link-icon links__link" href="" aria-label="instagram">
+								<svg
+									class="link-icon__icon"
+									xmlns="http://www.w3.org/2000/svg"
+									xmlns:xlink="http://www.w3.org/1999/xlink"
+									aria-hidden="true"
+									role="img"
+									width="32"
+									height="32"
+									preserveAspectRatio="xMidYMid meet"
+									viewBox="0 0 24 24"
+								>
+									<path
+										d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3z"
+										fill="currentColor"
+									></path>
+								</svg>
+							</a>
+						</li>
+						<li class="links__item">
+							<a class="link-icon links__link" href="" aria-label="vk">
+								<svg
+									class="link-icon__icon"
+									xmlns="http://www.w3.org/2000/svg"
+									xmlns:xlink="http://www.w3.org/1999/xlink"
+									aria-hidden="true"
+									role="img"
+									width="32"
+									height="32"
+									preserveAspectRatio="xMidYMid meet"
+									viewBox="0 0 24 24"
+								>
+									<path
+										d="M21.579 6.855c.14-.465 0-.806-.662-.806h-2.193c-.558 0-.813.295-.953.619c0 0-1.115 2.719-2.695 4.482c-.51.513-.743.675-1.021.675c-.139 0-.341-.162-.341-.627V6.855c0-.558-.161-.806-.626-.806H9.642c-.348 0-.558.258-.558.504c0 .528.79.65.871 2.138v3.228c0 .707-.127.836-.407.836c-.743 0-2.551-2.729-3.624-5.853c-.209-.607-.42-.852-.98-.852H2.752c-.627 0-.752.295-.752.619c0 .582.743 3.462 3.461 7.271c1.812 2.601 4.363 4.011 6.687 4.011c1.393 0 1.565-.313 1.565-.853v-1.966c0-.626.133-.752.574-.752c.324 0 .882.164 2.183 1.417c1.486 1.486 1.732 2.153 2.567 2.153h2.192c.626 0 .939-.313.759-.931c-.197-.615-.907-1.51-1.849-2.569c-.512-.604-1.277-1.254-1.51-1.579c-.325-.419-.231-.604 0-.976c.001.001 2.672-3.761 2.95-5.04z"
+										fill="currentColor"
+									></path>
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="footer-contacts">
+					<div class="footer-contacts__item">
+						<div class="footer-contacts__item-icon-slot">
+							<svg
+								class="footer-contacts__item-icon"
+								xmlns="http://www.w3.org/2000/svg"
+								aria-hidden="true"
+								role="img"
+								width="1em"
+								height="1em"
+								preserveAspectRatio="xMidYMid meet"
+								viewBox="0 0 24 24"
+							>
+								<path
+									fill="currentColor"
+									d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Z"
+								/>
+							</svg>
+						</div>
+						<div class="footer-contacts__item-text">Новомосковск, ул. Ленина, д.5, 1 этаж</div>
+					</div>
+					<div class="footer-contacts__item">
+						<div class="footer-contacts__item-icon-slot">
+							<svg
+								class="footer-contacts__item-icon"
+								xmlns="http://www.w3.org/2000/svg"
+								aria-hidden="true"
+								role="img"
+								width="1em"
+								height="1em"
+								preserveAspectRatio="xMidYMid meet"
+								viewBox="0 0 24 24"
+							>
+								<path
+									fill="currentColor"
+									d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.28-.28.67-.36 1.02-.25c1.12.37 2.32.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57c.11.35.03.74-.25 1.02l-2.2 2.2Z"
+								/>
+							</svg>
+						</div>
+						<div class="footer-contacts__item-text">
+							Звоните:
+							<a class="footer-contacts__item-link" href="tel:+7(989)897-98-21">+7(989)897-98-21</a>
+						</div>
+					</div>
+					<div class="footer-contacts__item">
+						<div class="footer-contacts__item-icon-slot">
+							<svg
+								class="footer-contacts__item-icon"
+								xmlns="http://www.w3.org/2000/svg"
+								aria-hidden="true"
+								role="img"
+								width="1em"
+								height="1em"
+								preserveAspectRatio="xMidYMid meet"
+								viewBox="0 0 24 24"
+							>
+								<path
+									fill="currentColor"
+									d="m20 8l-8 5l-8-5V6l8 5l8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z"
+								/>
+							</svg>
+						</div>
+						<div class="footer-contacts__item-text">
+							e-mail:
+							<a class="footer-contacts__item-link" href="mailto:info@fitoctena.ru">info@fitoctena.ru</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- ------------ -->
+		<div
+			class="modal modal--fade"
+			id="order-modal"
+			aria-labelledby="order-modal-title"
+			tabindex="-1"
+			aria-hidden="true"
+		>
+			<div class="modal__inner" data-dismiss="order-modal">
+				<div class="modal__content">
+					<div class="modal__header">
+						<h3 class="modal__title" id="order-modal-title">Заказать</h3>
+						<button class="modal__close" type="button" aria-label="Закрыть" data-dismiss="order-modal">
+							<span class="modal__close-line"></span>
+							<span class="modal__close-line"></span>
+						</button>
+					</div>
+					<div class="modal__body">
+						<form class="form order-form">
+							<div class="form-field form__field">
+								<label class="form-field__inner">
+									<span class="form-field__label sr-only">Ваше имя</span>
+									<span class="form-field__input-wrapper">
+										<input
+											class="form-field__input"
+											name="customer_name"
+											type="text"
+											placeholder="Ваше имя"
+											required
+										/>
+									</span>
+								</label>
+							</div>
+							<div class="form-field form__field">
+								<label class="form-field__inner">
+									<span class="form-field__label sr-only">Номер телефона</span>
+									<span class="form-field__input-wrapper">
+										<input
+											class="form-field__input"
+											name="customer_phone"
+											type="text"
+											placeholder="Номер телефона"
+											required
+										/>
+									</span>
+								</label>
+							</div>
+							<div class="modal__footer">
+								<button class="button button--sm button--text" type="reset" data-dismiss="order-modal">
+									Отмена
+								</button>
+								<button class="button button--sm" type="submit">Отправить</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div
+		class="modal modal--fade"
+		id="call-modal"
+		aria-labelledby="call-modal-title"
+		tabindex="-1"
+		aria-hidden="true"
+	>
+		<div class="modal__inner" data-dismiss="call-modal">
+			<div class="modal__content">
+				<div class="modal__header">
+					<h3 class="modal__title" id="call-modal-title">Оставить заявку</h3>
+					<button class="modal__close" type="button" aria-label="Закрыть" data-dismiss="call-modal">
+						<span class="modal__close-line"></span>
+						<span class="modal__close-line"></span>
+					</button>
+				</div>
+				<div class="modal__body">
+					<form class="form order-form">
+						<div class="form-field form__field">
+							<label class="form-field__inner">
+								<span class="form-field__label sr-only">Ваше имя</span>
+								<span class="form-field__input-wrapper">
+									<input
+										class="form-field__input"
+										name="customer_name"
+										type="text"
+										placeholder="Ваше имя"
+										required
+									/>
+								</span>
+							</label>
+						</div>
+						<div class="form-field form__field">
+							<label class="form-field__inner">
+								<span class="form-field__label sr-only">Номер телефона</span>
+								<span class="form-field__input-wrapper">
+									<input
+										class="form-field__input"
+										name="customer_phone"
+										type="text"
+										placeholder="Номер телефона"
+										required
+									/>
+								</span>
+							</label>
+						</div>
+						<div class="modal__footer">
+							<button class="button button--sm button--text" type="reset" data-dismiss="call-modal">
+								Отмена
+							</button>
+							<button class="button button--sm" type="submit">Отправить</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+		<div
+			class="modal modal--fade"
+			id="calc-modal"
+			aria-labelledby="calc-modal-title"
+			tabindex="-1"
+			aria-hidden="true"
+		>
+			<div class="modal__inner" data-dismiss="calc-modal">
+				<div class="modal__content">
+					<div class="modal__header">
+						<h3 class="modal__title" id="calc-modal-title">Рассчитать стоимость</h3>
+						<button class="modal__close" type="button" aria-label="Закрыть" data-dismiss="calc-modal">
+							<span class="modal__close-line"></span>
+							<span class="modal__close-line"></span>
+						</button>
+					</div>
+					<div class="modal__body">
+						<form class="form order-form">
+							<div class="form-field form__field">
+								<label class="form-field__inner">
+									<span class="form-field__label sr-only">Ваше имя</span>
+									<span class="form-field__input-wrapper">
+										<input
+											class="form-field__input"
+											name="customer_name"
+											type="text"
+											placeholder="Ваше имя"
+											required
+										/>
+									</span>
+								</label>
+							</div>
+							<div class="form-field form__field">
+								<label class="form-field__inner">
+									<span class="form-field__label sr-only">Номер телефона</span>
+									<span class="form-field__input-wrapper">
+										<input
+											class="form-field__input"
+											name="customer_phone"
+											type="text"
+											placeholder="Номер телефона"
+											required
+										/>
+									</span>
+								</label>
+							</div>
+							<div class="modal__footer">
+								<button class="button button--sm button--text" type="reset" data-dismiss="calc-modal">
+									Отмена
+								</button>
+								<button class="button button--sm" type="submit">Отправить</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div
+			class="modal modal--fade"
+			id="success-alert"
+			aria-labelledby="success-alert-title"
+			tabindex="-1"
+			aria-hidden="true"
+		>
+			<div class="modal__inner" data-dismiss="success-alert">
+				<div class="modal__content">
+					<div class="modal__header">
+						<h3 class="modal__title" id="success-alert-title">Успех</h3>
+					</div>
+					<div class="modal__body">
+						<p class="modal__body-text">Ваша заявка успешно отправлена</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Or use the minified version -->
+		<script src="libs/lightgallery/lightgallery.min.js"></script>
+		<!-- <script src="libs/swiper/swiper.js"></script> -->
+
+		<script>
+			// eslint-disable-next-line no-undef
+			lightGallery(document.querySelector('.gallery'), {
+				download: false,
+			});
+		</script>
+
+		<!-- lightgallery plugins -->
+		<script src="libs/gsap/gsap.min.js"></script>
+		<script src="libs/gsap/ScrollToPlugin.min.js"></script>
+
+		<script type="module" src="app.js"></script>
+	</body>
 </html>

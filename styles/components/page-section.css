@@ -1,5 +1,89 @@
 .page-section {
-	padding: 10rem 0 0;
+	position: relative;
+	z-index: 1;
+
+	padding-bottom: 3rem;
+}
+
+.page-section--bg {
+	background-image: url('../../images/section-bg.jpg');
+	background-position: 0 100%;
+	background-size: cover;
+}
+
+@media (min-width: 400px) {
+	.page-section {
+		padding-bottom: 4rem;
+	}
+}
+
+@media (min-width: 500px) {
+	.page-section {
+		padding-bottom: 6rem;
+	}
+}
+
+@media (min-width: 800px) {
+	.page-section {
+		padding-bottom: 8rem;
+	}
+}
+
+.page-section--padding-top {
+	padding-top: 3rem;
+}
+
+@media (min-width: 400px) {
+	.page-section--padding-top {
+		padding-top: 4rem;
+	}
+}
+
+@media (min-width: 500px) {
+	.page-section--padding-top {
+		padding-top: 6rem;
+	}
+}
+
+@media (min-width: 800px) {
+	.page-section--padding-top {
+		padding-top: 6rem;
+	}
+}
+
+.page-section--moss {
+	padding-top: 2rem;
+}
+
+@media (min-width: 400px) {
+	.page-section--moss {
+		padding-top: 4rem;
+	}
+}
+
+@media (min-width: 500px) {
+	.page-section--moss {
+		padding-top: 6rem;
+	}
+}
+
+@media (min-width: 800px) {
+	.page-section--moss {
+		padding-top: 8rem;
+	}
+}
+
+.page-section__title {
+	--container-max-width: calc(1250px + var(--container-padding-x) * 2);
+
+	max-width: var(--container-max-width);
+	margin: 0 auto 2em;
+}
+
+@media (min-width: 720px) {
+	.page-section__title {
+		margin: 0 auto 4em;
+	}
 }
 
 .page-section__container {
@@ -7,11 +91,9 @@
 
 	max-width: var(--container-max-width);
 	margin: 0 auto;
-	padding: 0 1rem;
+	padding: 0 var(--container-padding-x);
 }
 
-.page-section__title {
-	margin: 0 0 3em;
-
-	text-align: center;
+.page-section__container--full {
+	max-width: 100%;
 }

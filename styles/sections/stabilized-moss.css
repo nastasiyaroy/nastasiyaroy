@@ -1,0 +1,241 @@
+.stabilized-moss {
+	position: relative;
+
+	width: 100%;
+	padding: 5.5rem 0;
+
+	background: linear-gradient(to right, hsl(88, 100%, 32%) 0%, hsl(89, 58%, 51%) 100%);
+}
+
+.stabilized-moss::before {
+	position: absolute;
+	left: -50px;
+	bottom: 0;
+	content: '';
+
+	width: 300px;
+	height: 250px;
+
+	background: url('/images/about-product/bush1.png') no-repeat center;
+	background-size: contain;
+
+	pointer-events: none;
+}
+
+@media (min-width: 810px) {
+	.stabilized-moss::before {
+		left: -280px;
+		bottom: 0;
+
+		width: 400px;
+		height: 544px;
+	}
+}
+
+@media (min-width: 1300px) {
+	.stabilized-moss::before {
+		bottom: -100px;
+	}
+}
+
+@media (min-width: 1450px) {
+	.stabilized-moss::before {
+		left: -280px;
+
+		width: 500px;
+	}
+}
+
+@media (min-width: 1700px) {
+	.stabilized-moss::before {
+		left: -212px;
+		bottom: -151px;
+	}
+}
+
+.stabilized-moss::after {
+	position: absolute;
+	bottom: 0;
+	right: -15%;
+	content: '';
+
+	width: 300px;
+	height: 250px;
+
+	background: url('/images/about-product/bush2.png') no-repeat center;
+	background-size: contain;
+
+	pointer-events: none;
+}
+
+@media (min-width: 810px) {
+	.stabilized-moss::after {
+		bottom: -194px;
+
+		width: 350px;
+		height: 625px;
+	}
+}
+
+@media (min-width: 1350px) {
+	.stabilized-moss::after {
+		width: 400px;
+	}
+}
+@media (min-width: 1450px) {
+	.stabilized-moss::after {
+		width: 474px;
+	}
+}
+@media (min-width: 1700px) {
+	.stabilized-moss::after {
+		right: -10%;
+	}
+}
+
+@media (min-width: 1900px) {
+	.stabilized-moss::after {
+		bottom: -194px;
+		right: -59px;
+	}
+}
+
+.stabilized-moss__container {
+	--container-max-width: calc(1550px + var(--container-padding-x) * 2);
+
+	position: relative;
+	z-index: 1;
+
+	display: grid;
+	gap: 3rem;
+
+	max-width: var(--container-max-width);
+	margin: 0 auto;
+	padding: 0 var(--container-padding-x);
+
+	color: var(--color-white);
+}
+
+.stabilized-moss__container::after {
+	position: absolute;
+	left: 50%;
+	bottom: -95px;
+	content: '';
+
+	width: 159px;
+	height: 60px;
+
+	background: url('/images/about-product/schet.png') no-repeat center;
+	background-size: contain;
+
+	pointer-events: none;
+}
+
+@media (min-width: 1220px) {
+	.stabilized-moss__container::after {
+		bottom: -145px;
+
+		width: 199px;
+		height: 106px;
+	}
+}
+
+.stabilized-moss__header {
+	max-width: 600px;
+	padding: 0 0 0 20px;
+
+	border-left: 3px solid hsl(0, 0%, 100%);
+}
+
+@media (min-width: 380px) {
+	.stabilized-moss__header {
+		padding: 0 0 0 30px;
+	}
+}
+
+.stabilized-moss__title {
+	margin: 0 0 15px;
+
+	font-size: 22px;
+	font-family: Vollkorn, serif;
+	letter-spacing: -1px;
+	text-transform: uppercase;
+}
+
+@media (min-width: 810px) {
+	.stabilized-moss__title {
+		margin: 0 0 25px;
+
+		font-size: 34px;
+	}
+}
+
+.stabilized-moss__description {
+	font-size: 20px;
+}
+
+.stabilized-moss__content {
+	display: grid;
+	gap: 2rem;
+}
+
+@media (min-width: 1200px) {
+	.stabilized-moss__content {
+		grid-template-columns: 230px 1fr;
+		gap: 30px;
+	}
+}
+
+.stabilized-moss__wrapper {
+	display: grid;
+	gap: 20px;
+}
+
+@media (min-width: 1280px) {
+	.stabilized-moss__wrapper {
+		gap: 50px;
+	}
+}
+
+.stabilized-moss__property-list {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem;
+
+	max-width: 655px;
+	padding: 0;
+
+	list-style: none;
+}
+
+@media (min-width: 500px) {
+	.stabilized-moss__property-list {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
+
+.stabilized-moss__property {
+	display: grid;
+	grid-template-rows: min-content auto;
+	gap: 0.5em;
+	justify-items: center;
+}
+
+.stabilized-moss__property-img-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	height: 40px;
+}
+
+.stabilized-moss__property-img {
+	display: flex;
+
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.stabilized-moss__property-text {
+	text-align: center;
+}

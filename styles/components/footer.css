@@ -1,18 +1,38 @@
 .footer {
-	padding: 2rem 1rem;
+	padding: 2rem 0 4rem;
+
+	color: hsl(120, 1%, 60%);
+
+	background-color: hsl(140, 7%, 17%);
 }
 
 .footer__container {
-	display: flex;
+	display: grid;
 	gap: 2rem;
-	justify-content: space-between;
 	align-items: center;
 
 	max-width: var(--container-max-width);
 	margin: 0 auto;
-	padding: 0 1rem;
+	padding: 0 var(--container-padding-x);
+}
+
+@media (min-width: 600px) {
+	.footer__container {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+.footer__call {
+	margin: 1rem 0;
 }
 
 .footer__links {
 	display: grid;
+}
+
+.footer-contacts__item {
+	display: grid;
+	grid-template-columns: min-content 1fr;
+	gap: 0.5rem;
 }

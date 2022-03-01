@@ -3,6 +3,7 @@ import { BlockSticky } from './scripts/BlockSticky.js';
 import { Modal } from './scripts/Modal.js';
 import { setVh } from './scripts/utils.js';
 import { Alert } from './scripts/Alert.js';
+import { sliders } from './scripts/sliders.js';
 
 setVh();
 
@@ -22,15 +23,31 @@ headerTopSticky.run();
 
 const orderModal = new Modal({
 	modalSelector: '#order-modal',
-	toggleSelector: '[data-toggle="modal"]',
+	toggleSelector: '[data-target="#order-modal"]',
 });
 orderModal.run();
+
+const calcModal = new Modal({
+	modalSelector: '#calc-modal',
+	toggleSelector: '[data-target="#calc-modal"]',
+});
+calcModal.run();
+
+const callModal = new Modal({
+	modalSelector: '#call-modal',
+	toggleSelector: '[data-target="#call-modal"]',
+});
+callModal.run();
 
 document.querySelectorAll('.nav__link').forEach((link) => {
 	link.addEventListener('click', (event) => {
 		event.preventDefault();
+		const header = document.querySelector('.header__top--sticky');
 		// eslint-disable-next-line no-undef
-		gsap.to(window, { duration: 1, scrollTo: { y: link.getAttribute('href'), offsetY: -40 } });
+		gsap.to(window, {
+			duration: 1,
+			scrollTo: { y: link.getAttribute('href'), offsetY: header.clientHeight - 20 },
+		});
 	});
 });
 
@@ -71,3 +88,7 @@ const orderForm = () => {
 	form.addEventListener('submit', sendForm);
 };
 orderForm();
+
+sliders.forEach((slider) => {
+	slider.init();
+});

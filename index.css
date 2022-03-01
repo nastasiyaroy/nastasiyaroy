@@ -1,6 +1,12 @@
 @import './styles/fonts.css';
 @import './styles/base.css';
 @import './styles/page.css';
+
+@import './styles/components/swiper.css';
+
+@import './styles/components/promo.css';
+@import './styles/components/design.css';
+@import './styles/components/slider.css';
 @import './styles/components/main.css';
 @import './styles/components/link-icon.css';
 @import './styles/components/links.css';
@@ -13,6 +19,11 @@
 @import './styles/components/section-title.css';
 @import './styles/components/nav.css';
 @import './styles/components/header.css';
-@import './styles/components/work-cards.css';
 @import './styles/components/page-section.css';
-@import './styles/components/product-card.css';
+@import './styles/components/moss-card.css';
+@import './styles/components/review-card.css';
+@import './styles/components/work-card.css';
+@import './styles/components/economy.css';
+@import './styles/components/moss-logo.css';
+@import './styles/sections/all-year.css';
+@import './styles/sections/stabilized-moss.css';

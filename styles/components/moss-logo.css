@@ -1,0 +1,29 @@
+.moss-logos__footer {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
+	justify-content: space-between;
+	align-items: flex-end;
+
+	margin-top: 1rem;
+}
+
+.moss-logos__desc p {
+	margin-bottom: 0.4em;
+
+	font-size: 20px;
+}
+
+.moss-logo-card {
+	display: block;
+	aspect-ratio: 4 / 3;
+}
+
+.moss-logo-card__image {
+	display: block;
+
+	width: 100%;
+	height: 100%;
+
+	object-fit: cover;
+}

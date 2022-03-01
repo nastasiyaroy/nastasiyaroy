@@ -1,7 +1,7 @@
 import { Singleton } from './Singleton.js';
 
 export class PageScroll extends Singleton {
-	pageLoockElements = [];
+	pageLookElements = [];
 
 	scrollWidth = 0;
 
@@ -16,8 +16,8 @@ export class PageScroll extends Singleton {
 
 		this.scrollWidth = window.innerWidth - document.documentElement.clientWidth;
 		document.documentElement.classList.add('page--lock');
-		this.pageLoockElements = [...document.querySelectorAll('[data-fixed]'), document.documentElement];
-		this.pageLoockElements.forEach((element) => {
+		this.pageLookElements = [...document.querySelectorAll('[data-fixed]'), document.documentElement];
+		this.pageLookElements.forEach((element) => {
 			const { paddingRight } = getComputedStyle(element);
 			element.style.paddingRight = `${Number.parseFloat(paddingRight) + this.scrollWidth}px`;
 		});
@@ -33,7 +33,7 @@ export class PageScroll extends Singleton {
 		}
 
 		document.documentElement.classList.remove('page--lock');
-		this.pageLoockElements.forEach((element) => {
+		this.pageLookElements.forEach((element) => {
 			const { paddingRight } = getComputedStyle(element);
 			element.style.paddingRight = `${Number.parseFloat(paddingRight) - this.scrollWidth}px`;
 		});

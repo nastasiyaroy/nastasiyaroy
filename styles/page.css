@@ -1,6 +1,10 @@
+.page,
 .page__body {
-	color: var(--color-gray-600);
-	font-family: Montserrat, sans-serif;
+	height: 100%;
+}
+
+.page__body {
+	font-family: 'Source Sans', sans-serif;
 	line-height: 1.2;
 
 	background-color: var(--color-gray-50);
@@ -8,6 +12,8 @@
 
 .page--lock,
 .page--lock .page__body {
+	height: auto;
+
 	overflow: hidden;
 
 	touch-action: none;

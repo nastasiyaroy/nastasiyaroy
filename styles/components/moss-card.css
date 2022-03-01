@@ -1,0 +1,63 @@
+.moss-card {
+	width: 100%;
+	max-width: 24rem;
+
+	border-radius: 12px;
+
+	background-color: var(--color-white);
+
+	overflow: hidden;
+}
+
+.moss-card__image {
+	display: block;
+
+	width: 100%;
+
+	object-fit: cover;
+	aspect-ratio: 4 / 2.5;
+}
+
+.moss-card__body {
+	padding: 2rem 1rem 2.2rem;
+}
+
+.moss-card__title {
+	margin-bottom: 0.1em;
+
+	color: var(--color-primary);
+	font-weight: 700;
+	font-size: 18px;
+	font-family: Vollkorn, serif;
+}
+
+@media (min-width: 500px) {
+	.moss-card__title {
+		font-size: 22px;
+	}
+}
+
+.moss-card__price {
+	display: block;
+
+	font-weight: 600;
+	font-size: 1rem;
+}
+
+@media (min-width: 500px) {
+	.moss-card__price {
+		font-size: 1.2rem;
+	}
+}
+
+.moss-card__footer {
+	padding: 0 1.2rem 1.4rem;
+}
+
+.moss-card__footer-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	margin: 0 auto;
+}

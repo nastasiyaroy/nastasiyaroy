@@ -1,0 +1,15 @@
+.slider {
+	margin: 0 auto;
+}
+
+@media (min-width: 800px) {
+	.slider:not(.slider--full) {
+		max-width: 800px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.slider:not(.slider--full) {
+		max-width: 1220px;
+	}
+}

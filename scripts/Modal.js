@@ -12,7 +12,7 @@ export class Modal {
 
 	run = () => {
 		this.toggleList.forEach((toggle) => {
-			toggle.addEventListener('click', this.openModal.bind(this, toggle.dataset.target));
+			toggle.addEventListener('click', this.openModal);
 		});
 	};
 
