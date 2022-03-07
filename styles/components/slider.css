@@ -3,13 +3,25 @@
 }
 
 @media (min-width: 800px) {
-	.slider:not(.slider--full) {
+	.slider:not(.slider--full):not(.slider--unknown) {
 		max-width: 800px;
 	}
 }
 
 @media (min-width: 1200px) {
-	.slider:not(.slider--full) {
+	.slider:not(.slider--full):not(.slider--unknown) {
 		max-width: 1220px;
+	}
+}
+
+@media (min-width: 800px) {
+	.slider--unknown {
+		max-width: 600px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.slider--unknown {
+		max-width: 600px;
 	}
 }

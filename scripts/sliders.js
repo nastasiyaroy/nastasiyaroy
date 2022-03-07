@@ -2,6 +2,16 @@
 // eslint-disable-next-line import/no-named-as-default
 import Swiper from '../libs/swiper/swiper.js';
 
+const swiper0 = new Swiper('.header-swiper', {
+	init: false,
+	speed: 1000,
+	effect: 'fade',
+	slidesPerView: 1,
+	autoplay: {
+		delay: 4000,
+	},
+});
+
 const swiper1 = new Swiper('.slider--1 .swiper', {
 	init: false,
 	slidesPerView: 1,
@@ -155,4 +165,33 @@ const swiper3 = new Swiper('.slider--3 .swiper', {
 	},
 });
 
-export const sliders = [swiper1, swiper2, swiper4, swiper3, swiper5];
+const swiper7 = new Swiper('.slider--unknown .swiper', {
+	init: false,
+	slidesPerView: 1,
+	spaceBetween: 20,
+	pagination: {
+		el: '.slider--unknown .swiper-pagination',
+		clickable: true,
+		bulletElement: 'button',
+		bulletClass: 'swiper-pagination__bullet',
+		bulletActiveClass: 'swiper-pagination__bullet--active',
+	},
+	navigation: {
+		nextEl: `.slider--unknown .swiper-navigation--next`,
+		prevEl: `.slider--unknown .swiper-navigation--prev`,
+	},
+	breakpoints: {
+		800: {
+			slidesPerView: 1,
+			spaceBetween: 30,
+		},
+		1200: {
+			slidesPerView: 1,
+		},
+	},
+});
+
+const sliders = [swiper0, swiper1, swiper2, swiper4, swiper3, swiper5, swiper7];
+sliders.forEach((slider) => {
+	slider.init();
+});

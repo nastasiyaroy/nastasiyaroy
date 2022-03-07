@@ -2,7 +2,9 @@
 @import './styles/base.css';
 @import './styles/page.css';
 
+@import './styles/animaton.css';
 @import './styles/components/swiper.css';
+@import './styles/components/header-swiper.css';
 
 @import './styles/components/promo.css';
 @import './styles/components/design.css';
@@ -26,4 +28,5 @@
 @import './styles/components/economy.css';
 @import './styles/components/moss-logo.css';
 @import './styles/sections/all-year.css';
+@import './styles/sections/unknown.css';
 @import './styles/sections/stabilized-moss.css';

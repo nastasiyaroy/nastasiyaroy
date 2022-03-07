@@ -1,0 +1,21 @@
+@keyframes dense {
+	0% {
+		transform: translateX(0);
+	}
+
+	33% {
+		transform: translateX(8%) scale(0.9);
+
+		animation-timing-function: cubic-bezier(0.5, 0, 0.7, 0.5);
+	}
+
+	66% {
+		transform: translateX(-8%) scale(0.9);
+
+		animation-timing-function: cubic-bezier(0.3, 0.38, 0.55, 0.95);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+}

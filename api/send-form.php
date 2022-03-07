@@ -28,9 +28,10 @@ if (validation($request->customer_phone)) {
 	error();
 }
 
-Database::query("INSERT INTO orders (`customer_name`, `customer_phone`) VALUES (:customer_name, :customer_phone)");
+Database::query("INSERT INTO orders (`customer_name`, `customer_phone`, `mail_type`) VALUES (:customer_name, :customer_phone, :mail_type)");
 Database::bind([
 	':customer_name' => $request->customer_name,
+	':mail_type' => $request->type,
 	':customer_phone' => $request->customer_phone,
 ]);
 

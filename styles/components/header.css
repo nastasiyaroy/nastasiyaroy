@@ -1,4 +1,6 @@
 .header {
+	position: relative;
+
 	display: grid;
 	grid-template-rows: 80px 1fr 20%;
 
@@ -14,6 +16,9 @@
 }
 
 .header__top {
+	position: relative;
+	z-index: 2;
+
 	padding: 1.5rem 0;
 }
 
@@ -76,6 +81,9 @@
 }
 
 .header__description-container {
+	position: relative;
+	z-index: 2;
+
 	max-width: 1400px;
 	margin: 0 auto;
 	padding: 0 1rem;

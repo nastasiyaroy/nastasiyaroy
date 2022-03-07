@@ -79,6 +79,10 @@
 	}
 }
 
+.promo__list-item:hover .promo__list-item-img {
+	animation: dense 400ms 1;
+}
+
 .promo__list-item-title {
 	margin-bottom: 0.2em;
 

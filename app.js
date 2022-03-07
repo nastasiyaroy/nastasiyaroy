@@ -1,9 +1,11 @@
 import { MobileMenu } from './scripts/MobileMenu.js';
 import { BlockSticky } from './scripts/BlockSticky.js';
-import { Modal } from './scripts/Modal.js';
 import { setVh } from './scripts/utils.js';
-import { Alert } from './scripts/Alert.js';
-import { sliders } from './scripts/sliders.js';
+import './scripts/sliders.js';
+import './scripts/modals/order-modal.js';
+import './scripts/modals/price-modal.js';
+import './scripts/modals/calc-modal.js';
+import './scripts/modals/call-modal.js';
 
 setVh();
 
@@ -21,24 +23,6 @@ const headerTopSticky = new BlockSticky({
 
 headerTopSticky.run();
 
-const orderModal = new Modal({
-	modalSelector: '#order-modal',
-	toggleSelector: '[data-target="#order-modal"]',
-});
-orderModal.run();
-
-const calcModal = new Modal({
-	modalSelector: '#calc-modal',
-	toggleSelector: '[data-target="#calc-modal"]',
-});
-calcModal.run();
-
-const callModal = new Modal({
-	modalSelector: '#call-modal',
-	toggleSelector: '[data-target="#call-modal"]',
-});
-callModal.run();
-
 document.querySelectorAll('.nav__link').forEach((link) => {
 	link.addEventListener('click', (event) => {
 		event.preventDefault();
@@ -49,46 +33,4 @@ document.querySelectorAll('.nav__link').forEach((link) => {
 			scrollTo: { y: link.getAttribute('href'), offsetY: header.clientHeight - 20 },
 		});
 	});
-});
-
-const orderForm = () => {
-	const alert = new Alert({
-		alertSelector: '#success-alert',
-	});
-
-	const form = document.querySelector('.order-form');
-
-	const sendForm = async (event) => {
-		event.preventDefault();
-		try {
-			const formData = new FormData(form);
-			const response = await fetch('/api/send-form.php', {
-				method: 'POST',
-				body: formData,
-			});
-			const result = await response.json();
-
-			if (result.success === 'error') {
-				return;
-			}
-
-			form.reset();
-			orderModal.closeModal();
-			setTimeout(() => {
-				alert.openModal();
-				setTimeout(() => {
-					alert.closeModal();
-				}, 5000);
-			}, 1000);
-		} catch (error) {
-			console.error(error);
-		}
-	};
-
-	form.addEventListener('submit', sendForm);
-};
-orderForm();
-
-sliders.forEach((slider) => {
-	slider.init();
 });

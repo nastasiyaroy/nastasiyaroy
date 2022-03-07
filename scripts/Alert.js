@@ -1,11 +1,14 @@
 import { PageScroll } from './PageScroll.js';
 
+const pageScroll = new PageScroll();
 export class Alert {
+	isOpen = false;
+
 	constructor(options = {}) {
 		this.options = options;
-		this.isOpen = false;
-		this.modal = document.querySelector(this.options.alertSelector);
-		this.pageScroll = new PageScroll();
+		this.modal = document.querySelector(this.options.selector);
+		this.pageScroll = pageScroll;
+		this.dismissButtons = [...this.modal.querySelectorAll(`[data-dismiss="${this.options.selector.slice(1)}"]`)];
 	}
 
 	openModal = () => {
@@ -18,9 +21,6 @@ export class Alert {
 		this.modal.style.paddingRight = `${scrollWidth}px`;
 		this.modal.setAttribute('role', 'dialog');
 
-		this.dismissButtons = [
-			...this.modal.querySelectorAll(`[data-dismiss="${this.options.alertSelector.slice(1)}"]`),
-		];
 		this.modalContent = this.modal.querySelector('.modal__content');
 		this.modal.style.display = 'block';
 		this.modal.style.display = getComputedStyle(this.modal).display;
@@ -40,14 +40,13 @@ export class Alert {
 
 		const transitionendHandler = () => {
 			this.modal.style.display = 'none';
-			this.modal.removeEventListener('transitionend', transitionendHandler);
 			this.modal.style.removeProperty('padding-right');
 			this.modal.removeAttribute('role', 'dialog');
 			this.isOpen = false;
 			this.pageScroll.unlockPage();
 		};
 
-		this.modal.addEventListener('transitionend', transitionendHandler);
+		this.modal.addEventListener('transitionend', transitionendHandler, { once: true });
 	};
 
 	// eslint-disable-next-line class-methods-use-this

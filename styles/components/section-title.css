@@ -100,6 +100,10 @@
 	.section-title__text {
 		font-size: 60px;
 	}
+
+	.section-title--small .section-title__text {
+		font-size: 40px;
+	}
 }
 
 .section-title__text-overlay-inner {
