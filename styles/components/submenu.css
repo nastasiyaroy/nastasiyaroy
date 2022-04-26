@@ -1,0 +1,45 @@
+.submenu {
+	position: absolute;
+	top: calc(100% + 0.5rem);
+	right: 0;
+	z-index: 10;
+
+	display: grid;
+	gap: 0.4rem;
+
+	margin: 0;
+	padding: 0;
+	padding: 1rem;
+
+	border: 2px solid hsl(116, 59%, 16%);
+	border-radius: 0.8rem;
+
+	background-color: hsl(117, 33%, 42%);
+
+	list-style: none;
+
+	visibility: hidden;
+}
+
+.submenu--show {
+	visibility: visible;
+}
+
+.header__top--sticky .submenu--show {
+	visibility: hidden;
+}
+
+.header__top--sticky.header__top--show .submenu--show {
+	visibility: visible;
+}
+
+.submenu__link {
+	font-size: 1.2rem;
+	white-space: nowrap;
+	text-decoration: none;
+}
+
+.submenu__link:hover,
+.submenu__link:focus {
+	text-decoration: underline;
+}

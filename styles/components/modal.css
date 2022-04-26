@@ -146,16 +146,3 @@
 .modal__body-text {
 	font-weight: 500;
 }
-
-.modal__footer {
-	display: flex;
-	justify-content: space-between;
-
-	margin-top: 1.4rem;
-}
-
-@media (min-width: 500px) {
-	.modal__footer {
-		margin-top: 2.4rem;
-	}
-}

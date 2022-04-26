@@ -1,6 +1,9 @@
 import { MobileMenu } from './scripts/MobileMenu.js';
 import { BlockSticky } from './scripts/BlockSticky.js';
 import { setVh } from './scripts/utils.js';
+import './scripts/button-top.js';
+import './scripts/header-form.js';
+import './scripts/submenu.js';
 import './scripts/sliders.js';
 import './scripts/modals/order-modal.js';
 import './scripts/modals/price-modal.js';

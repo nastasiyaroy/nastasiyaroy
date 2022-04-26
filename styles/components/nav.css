@@ -226,7 +226,7 @@
 		grid-auto-rows: max-content;
 		gap: 1.5rem;
 
-		overflow-y: auto;
+		/* overflow-y: auto; */
 	}
 }
 
@@ -234,6 +234,34 @@
 	.nav__list {
 		display: flex;
 	}
+}
+
+.nav__item {
+	position: relative;
+
+	display: grid;
+	grid-template-columns: max-content min-content;
+	align-items: center;
+}
+
+.nav__item-toggle {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 2rem;
+	height: 2rem;
+	margin-left: -0.4rem;
+	padding: 0;
+
+	color: inherit;
+	font: inherit;
+
+	border: 0;
+
+	background-color: transparent;
+
+	cursor: pointer;
 }
 
 .nav__link {
